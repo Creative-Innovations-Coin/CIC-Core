@@ -67,7 +67,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 60000; // every130k blocks
         consensus.nMasternodePaymentsStartBlock = 2; // block after premine
-        consensus.nMasternodePaymentsIncreaseBlock = 158000000; // not used
+        consensus.nMasternodePaymentsIncreaseBlock = 1528388100; // not used
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // not used
         consensus.nInstantSendKeepLock = 24;
         consensus.nBudgetPaymentsStartBlock = 2100000000; // year 10000+
@@ -120,7 +120,7 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1527532356, 637040, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1528388100, 0, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
 
 	 //////////////
@@ -151,7 +151,7 @@ public:
                         if (genesis.nNonce % 10000 == 0)
                         {
                             LogPrintf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-                            // std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
+                            //std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
                         }
                     }
                     std::cout << "Mainnet ---\n";
@@ -159,7 +159,7 @@ public:
                     std::cout << "   time: " << genesis.nTime << "\n";
                     std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
                     std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-                    // Mainnet --- nonce: 296277 time: 1390095618 hash: 000000bdd771b14e5a031806292305e563956ce2584278de414d9965f6ab54b0
+
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
 
@@ -197,7 +197,7 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             ( 0, uint256S("0x")),
-            1527532356, // * UNIX timestamp of last checkpoint block
+            1528388100, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500	        // * estimated number of transactions per day after checkpoint
