@@ -2160,7 +2160,7 @@ CAmount GetFoundersReward(int nHeight)
 {
 
     CAmount blockValue = getblkreward(nHeight);
-    return (blockValue >0) ? blockValue * 0.10 : 0;
+    return (blockValue >0) ? blockValue * 0.01 : 0;
 }
 
 bool IsInitialBlockDownload()
