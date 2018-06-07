@@ -46,8 +46,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "hello reef buddies";
-    const CScript genesisOutputScript = CScript() << ParseHex("040a3ada5ba6280b99f49a92ba47221e6a72af844ec49d0c8bbdae1ec09a4c79b22e42eefe670ae04490556f91780eb57de76493d020c91d0c421c2fa052b28a2b") << OP_CHECKSIG;
+    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 7 June 2018";
+    const CScript genesisOutputScript = CScript() << ParseHex("04dfab48e49169da8dd843d67a836e088a2ab91b9139d8a5449b5f703270da001db34f56774c2267dc2fa7d22def8166a1fe8a2b331dad89479f52853aece7bfd2") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -115,14 +115,14 @@ public:
         pchMessageStart[1] = 0xb1;
         pchMessageStart[2] = 0x9c;
         pchMessageStart[3] = 0xd5;
-        vAlertPubKey = ParseHex("044513449073a8efe161dc42e7c07c61c4a8f59297dc8ebacbc2f77345084d058399022bc6a0db0719739f183d14b04893fb78c3b9bd9a3f88ecf8ea06adae99fe");
-        nDefaultPort = 9857;
+        vAlertPubKey = ParseHex("042f1c1963c1efff3b846209dd9433d2c67347c31e2163198e896caeaa7fa887449bc59fc267623b16e446f494d06c3bcf65a46babdb6e87560b60fcc7199971c8");
+        nDefaultPort = 9889;
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1527532356, 637040, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-   /*
+
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -162,22 +162,18 @@ public:
                     // Mainnet --- nonce: 296277 time: 1390095618 hash: 000000bdd771b14e5a031806292305e563956ce2584278de414d9965f6ab54b0
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-     */   
-        assert(consensus.hashGenesisBlock == uint256S("0000087b582c43136586c1cbe4ad35461c5d3022d78d0127ba3013bd23d2e278"));
-        assert(genesis.hashMerkleRoot == uint256S("9b16e2d18fb3b14973933a16c5b64f7790d8cd6e17e60a0086f456915ab8152b"));
-        //vSeeds.push_back(CDNSSeedData("beardseed2", "dnsseeder1.bunkens.be"));
-        //vSeeds.push_back(CDNSSeedData("beardseed1", "dnsseeder2.bunkens.be"));
-        vSeeds.push_back(CDNSSeedData("23.95.197.35", "23.95.197.35"));
-        vSeeds.push_back(CDNSSeedData("149.28.65.238", "149.28.65.238"));
-        vSeeds.push_back(CDNSSeedData("198.23.228.235", "198.23.228.235"));
-	vSeeds.push_back(CDNSSeedData("107.174.138.108", "107.174.138.108"));
-	vSeeds.push_back(CDNSSeedData("107.174.47.174", "107.174.47.174"));
-	vSeeds.push_back(CDNSSeedData("alttank", "test.alttank.ca"));
-        vSeeds.push_back(CDNSSeedData("alttank2", "seednode.alttank.ca"));
+
+    //    assert(consensus.hashGenesisBlock == uint256S("0000087b582c43136586c1cbe4ad35461c5d3022d78d0127ba3013bd23d2e278"));
+    //    assert(genesis.hashMerkleRoot == uint256S("9b16e2d18fb3b14973933a16c5b64f7790d8cd6e17e60a0086f456915ab8152b"));
+
+        vSeeds.push_back(CDNSSeedData("alpha.creativecoin.design", "alpha.creativecoin.design"));
+        vSeeds.push_back(CDNSSeedData("beta.creativecoin.design", "beta.creativecoin.design"));
+        vSeeds.push_back(CDNSSeedData("gamma.creativecoin.design", "gamma.creativecoin.design"));
+
         // Reef addresses start with 'R'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
         // Reef script addresses start with '7'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,16);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,87);
         // Reef private keys start with 'E'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
         // Reef BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
@@ -196,11 +192,11 @@ public:
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
         strSporkPubKey = "023b03f501578f0b2c2004f2d01788da18b901d69a5698e94a72b5d30adc41daec";
-        strMasternodePaymentsPubKey = "041fda8a1eff0a55d4d5c2d10f426e9c204d8faa228e3bbbaccd716a0db59bbfbe15dc17975f41e554ad551316b97586ddf5bec909a9fc3fc36c17a9611294fcf8";
+        strMasternodePaymentsPubKey = "0434273b4ec9c9111cd9ca592281e001f6737e18fbe63d2024f17873ba9d8ba3bff040c52e1bdb46c703c3baa62f4d7e8aa1f1f26d32c8ef737919762fd18e4c9e";
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0000087b582c43136586c1cbe4ad35461c5d3022d78d0127ba3013bd23d2e278")),
+            ( 0, uint256S("0x")),
             1527532356, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
@@ -257,7 +253,7 @@ public:
         pchMessageStart[2] = 0x7d;
         pchMessageStart[3] = 0xd6;
         vAlertPubKey = ParseHex("04f9e05c65b8cf20e31464d7f35504b62999f845c9242bc6b1bcd1993c643e3ca40527a13de58afa831dccdeacae82b39c01602daf3a7f4151032f5dacefa36932");
-        nDefaultPort = 17717;
+        nDefaultPort = 10809;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nPruneAfterHeight = 1000;
 
