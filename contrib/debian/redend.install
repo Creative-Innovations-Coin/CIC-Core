@@ -1,2 +1,2 @@
-usr/local/bin/reefd usr/bin
-usr/local/bin/reef-cli usr/bin
+usr/local/bin/cicd usr/bin
+usr/local/bin/cic-cli usr/bin

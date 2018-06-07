@@ -5,7 +5,7 @@
 #include "wallet/wallet.h"
 #include "wallet/walletdb.h"
 
-#include "test/test_reef.h"
+#include "test/test_cic.h"
 
 #include <stdint.h>
 

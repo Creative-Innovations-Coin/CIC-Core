@@ -55,15 +55,15 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += reefd
+  bin_PROGRAMS += cicd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += reef-cli reef-tx
+  bin_PROGRAMS += cic-cli cic-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
-# reef core #
+# cic core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addressindex.h \
@@ -191,7 +191,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between reefd and reef-qt
+# server: shared between cicd and cic-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -249,7 +249,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between reefd and reef-qt, but only linked
+# wallet: shared between cicd and cic-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -338,7 +338,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha512.cpp \
   crypto/sha512.h
 
-# common: shared between reefd, and reef-qt and non-server tools
+# common: shared between cicd, and cic-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -395,7 +395,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between reef-cli and reef-qt
+# cli: shared between cic-cli and cic-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -406,16 +406,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-reefd_SOURCES = reefd.cpp
-reefd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-reefd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-reefd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+cicd_SOURCES = cicd.cpp
+cicd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+cicd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+cicd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-reefd_SOURCES += reefd-res.rc
+cicd_SOURCES += cicd-res.rc
 endif
 
-reefd_LDADD = \
+cicd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -426,50 +426,50 @@ reefd_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-reefd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+cicd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-reefd_LDADD += libbitcoin_wallet.a
+cicd_LDADD += libbitcoin_wallet.a
 endif
 
-reefd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+cicd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
-# reef-cli binary #
-reef_cli_SOURCES = reef-cli.cpp
-reef_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-reef_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-reef_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# cic-cli binary #
+cic_cli_SOURCES = cic-cli.cpp
+cic_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+cic_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+cic_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-reef_cli_SOURCES += reef-cli-res.rc
+cic_cli_SOURCES += cic-cli-res.rc
 endif
 
-reef_cli_LDADD = \
+cic_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL)
-reef_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+cic_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# reef-tx binary #
-reef_tx_SOURCES = reef-tx.cpp
-reef_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-reef_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-reef_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# cic-tx binary #
+cic_tx_SOURCES = cic-tx.cpp
+cic_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+cic_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+cic_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-reef_tx_SOURCES += reef-tx-res.rc
+cic_tx_SOURCES += cic-tx-res.rc
 endif
 
-reef_tx_LDADD = \
+cic_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-reef_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+cic_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

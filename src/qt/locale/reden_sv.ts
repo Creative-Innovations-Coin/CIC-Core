@@ -58,12 +58,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Reef addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>De här är dina Reef-adresser för att skicka betalningar. Kontrollera alltid mängden och mottagaradressen innan du skickar mynt.</translation>
+        <source>These are your Cic addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>De här är dina Cic-adresser för att skicka betalningar. Kontrollera alltid mängden och mottagaradressen innan du skickar mynt.</translation>
     </message>
     <message>
-        <source>These are your Reef addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>De här är dina Reef-adresser för betalningsmottagningar. Det rekommenderas att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your Cic addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>De här är dina Cic-adresser för betalningsmottagningar. Det rekommenderas att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,8 +164,8 @@
         <translation>Bekräfta plånbokskryptering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR REEF&lt;/b&gt;!</source>
-        <translation>Varning: Om du krypterar din plånbok och förlorar din lösenfras kommer du att &lt;b&gt;FÖRLORA ALLA DINA REEF&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CIC&lt;/b&gt;!</source>
+        <translation>Varning: Om du krypterar din plånbok och förlorar din lösenfras kommer du att &lt;b&gt;FÖRLORA ALLA DINA CIC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -176,8 +176,8 @@
         <translation>Plånbok krypterad</translation>
     </message>
     <message>
-        <source>Reef will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your reefs from being stolen by malware infecting your computer.</source>
-        <translation>Reef kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina Reef stjäls av skadeprogram som har infekterat din dator.</translation>
+        <source>Cic will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cics from being stolen by malware infecting your computer.</source>
+        <translation>Cic kommer nu att färdigställa krypteringsprocessen. Kom ihåg att krypteringen av din plånbok inte kan skydda dig helt och hållet från att dina Cic stjäls av skadeprogram som har infekterat din dator.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -219,8 +219,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Reef Core</source>
-        <translation>Reef Core
+        <source>Cic Core</source>
+        <translation>Cic Core
 </translation>
     </message>
     <message>
@@ -244,16 +244,16 @@
         <translation>&amp;Skicka</translation>
     </message>
     <message>
-        <source>Send coins to a Reef address</source>
-        <translation>Skicka mynt till en Reef-adress</translation>
+        <source>Send coins to a Cic address</source>
+        <translation>Skicka mynt till en Cic-adress</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
         <translation>&amp;Motta</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and reef: URIs)</source>
-        <translation>Begär betalningar (genererar QR-koder och Reef:-URI:s)</translation>
+        <source>Request payments (generates QR codes and cic: URIs)</source>
+        <translation>Begär betalningar (genererar QR-koder och Cic:-URI:s)</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -272,8 +272,8 @@
         <translation>Avsluta applikationen</translation>
     </message>
     <message>
-        <source>&amp;About Reef Core</source>
-        <translation>&amp;Om Reef Core</translation>
+        <source>&amp;About Cic Core</source>
+        <translation>&amp;Om Cic Core</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -288,8 +288,8 @@
         <translation>&amp;Alternativ...</translation>
     </message>
     <message>
-        <source>Modify configuration options for Reef</source>
-        <translation>Anpassa konfigurationsalternatv för Reef</translation>
+        <source>Modify configuration options for Cic</source>
+        <translation>Anpassa konfigurationsalternatv för Cic</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -340,16 +340,16 @@
         <translation>Signera &amp;meddelande...</translation>
     </message>
     <message>
-        <source>Sign messages with your Reef addresses to prove you own them</source>
-        <translation>Signera meddelanden med dina Reef-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your Cic addresses to prove you own them</source>
+        <translation>Signera meddelanden med dina Cic-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Bekräfta meddelande...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Reef addresses</source>
-        <translation>Bekräfta meddelanden för att garantera att de signerades med de angivna Reef-adresserna</translation>
+        <source>Verify messages to ensure they were signed with specified Cic addresses</source>
+        <translation>Bekräfta meddelanden för att garantera att de signerades med de angivna Cic-adresserna</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -404,16 +404,16 @@
         <translation>Öppna &amp;URI...</translation>
     </message>
     <message>
-        <source>Open a reef: URI or payment request</source>
-        <translation>Öppna en Reef-URI eller betalningsbegäran</translation>
+        <source>Open a cic: URI or payment request</source>
+        <translation>Öppna en Cic-URI eller betalningsbegäran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Kommandoradalternativ</translation>
     </message>
     <message>
-        <source>Show the Reef Core help message to get a list with possible Reef command-line options</source>
-        <translation>Visa Reef Core-hjälpmeddelandet för att få en lista med möjliga Reef-kommandoradalternativ</translation>
+        <source>Show the Cic Core help message to get a list with possible Cic command-line options</source>
+        <translation>Visa Cic Core-hjälpmeddelandet för att få en lista med möjliga Cic-kommandoradalternativ</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -758,28 +758,28 @@ Adress: %4
         <translation>Vänligen välj en integritetsnivå.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 REEF</source>
-        <translation>Använd 2 enskilda masternoder för att mixa medel upp till 1000 REEF</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 CIC</source>
+        <translation>Använd 2 enskilda masternoder för att mixa medel upp till 1000 CIC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 REEF</source>
-        <translation>Använd 8 enskilda masternoder för att mixa medel upp till 1000 REEF.</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 CIC</source>
+        <translation>Använd 8 enskilda masternoder för att mixa medel upp till 1000 CIC.</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Använd 16 enskilda masternoder</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 REEF to anonymize 1000 REEF</source>
-        <translation>Detta alternativ är det snabbaste och kommer att kosta omkring ~0,025 REEF för att anonymisera 1000 REEF</translation>
+        <source>This option is the quickest and will cost about ~0.025 CIC to anonymize 1000 CIC</source>
+        <translation>Detta alternativ är det snabbaste och kommer att kosta omkring ~0,025 CIC för att anonymisera 1000 CIC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 REEF to anonymize 1000 REEF</source>
-        <translation>Detta alternativ är relativt snabbt och kommer att kosta omkring 0,05 REEF för att anonymisera 1000 REEF</translation>
+        <source>This option is moderately fast and will cost about 0.05 CIC to anonymize 1000 CIC</source>
+        <translation>Detta alternativ är relativt snabbt och kommer att kosta omkring 0,05 CIC för att anonymisera 1000 CIC</translation>
     </message>
     <message>
-        <source>0.1 REEF per 1000 REEF you anonymize.</source>
-        <translation>0,1 REEF per 1000 REEF du anonymiserar.</translation>
+        <source>0.1 CIC per 1000 CIC you anonymize.</source>
+        <translation>0,1 CIC per 1000 CIC du anonymiserar.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -790,16 +790,16 @@ Adress: %4
         <translation>Darksend-konfiguration</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Reef's configuration screen.</source>
-        <translation>Darksend ställdes framgångsrikt om till grundläggande (%1 och 2 omgångar). Du kan ändra detta när som helst genom att öppna Reef:s konfigurationsskärm.</translation>
+        <source>Darksend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Cic's configuration screen.</source>
+        <translation>Darksend ställdes framgångsrikt om till grundläggande (%1 och 2 omgångar). Du kan ändra detta när som helst genom att öppna Cic:s konfigurationsskärm.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Reef's configuration screen.</source>
-        <translation>Darksend ställdes framgångsrikt in på hög (%1 och 8 omgångar). Du kan ändra detta när som helst genom att öppna Reef:s konfigurationsskärm.</translation>
+        <source>Darksend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Cic's configuration screen.</source>
+        <translation>Darksend ställdes framgångsrikt in på hög (%1 och 8 omgångar). Du kan ändra detta när som helst genom att öppna Cic:s konfigurationsskärm.</translation>
     </message>
     <message>
-        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Reef's configuration screen.</source>
-        <translation>Darksend ställdes framgångsrikt in på maximal (%1 och 16 omgångar). Du kan ändra detta när som helst genom att öppna Reef:s konfigurationsskärm</translation>
+        <source>Darksend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Cic's configuration screen.</source>
+        <translation>Darksend ställdes framgångsrikt in på maximal (%1 och 16 omgångar). Du kan ändra detta när som helst genom att öppna Cic:s konfigurationsskärm</translation>
     </message>
 </context>
 <context>
@@ -841,8 +841,8 @@ Adress: %4
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Reef address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig Reef-adress.</translation>
+        <source>The entered address "%1" is not a valid Cic address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig Cic-adress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -883,8 +883,8 @@ Adress: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Reef Core</source>
-        <translation>Reef Core
+        <source>Cic Core</source>
+        <translation>Cic Core
 </translation>
     </message>
     <message>
@@ -931,16 +931,16 @@ Adress: %4
         <translation>Välkommen</translation>
     </message>
     <message>
-        <source>Welcome to Reef Core.</source>
-        <translation>Välkommen till Reef Core.</translation>
+        <source>Welcome to Cic Core.</source>
+        <translation>Välkommen till Cic Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Reef Core will store its data.</source>
-        <translation>Då detta är första gången programmet startas kan du välja var Reef Core ska lagra sin data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Cic Core will store its data.</source>
+        <translation>Då detta är första gången programmet startas kan du välja var Cic Core ska lagra sin data.</translation>
     </message>
     <message>
-        <source>Reef Core will download and store a copy of the Reef block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Reef Core kommer att laddas ned och lagra en kopia av Reef:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
+        <source>Cic Core will download and store a copy of the Cic block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Cic Core kommer att laddas ned och lagra en kopia av Cic:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -989,12 +989,12 @@ Adress: %4
         <translation>&amp;Huvud</translation>
     </message>
     <message>
-        <source>Automatically start Reef after logging in to the system.</source>
-        <translation>Starta Reef automatiskt efter systeminloggning.</translation>
+        <source>Automatically start Cic after logging in to the system.</source>
+        <translation>Starta Cic automatiskt efter systeminloggning.</translation>
     </message>
     <message>
-        <source>&amp;Start Reef on system login</source>
-        <translation>&amp;Starta Reef vid systeminloggning</translation>
+        <source>&amp;Start Cic on system login</source>
+        <translation>&amp;Starta Cic vid systeminloggning</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1021,8 +1021,8 @@ Adress: %4
         <translation>Denna mängd fungerar som en tröskel att stänga av Darksend då det har uppnåtts.</translation>
     </message>
     <message>
-        <source>Amount of Reef to keep anonymized</source>
-        <translation>Mängd Reef att bibehålla anonymiserade</translation>
+        <source>Amount of Cic to keep anonymized</source>
+        <translation>Mängd Cic att bibehålla anonymiserade</translation>
     </message>
     <message>
         <source>W&amp;allet</source>
@@ -1049,8 +1049,8 @@ Adress: %4
         <translation>&amp;Nätverk</translation>
     </message>
     <message>
-        <source>Automatically open the Reef client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna Reef:s klientport automatiskt på routern. Detta fungerar bara om din router stöder UPnP och är aktiverad.</translation>
+        <source>Automatically open the Cic client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna Cic:s klientport automatiskt på routern. Detta fungerar bara om din router stöder UPnP och är aktiverad.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1101,14 +1101,14 @@ Adress: %4
         <translation>Användargränssnitt&amp;språk: </translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Reef.</source>
-        <translation>Användargränssnittspråket kan ställas in här. Denna inställning träder i kraft efter att Reef startats om.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Cic.</source>
+        <translation>Användargränssnittspråket kan ställas in här. Denna inställning träder i kraft efter att Cic startats om.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/reef/</source>
+https://www.transifex.com/projects/p/cic/</source>
         <translation>Fattas språk eller är det en ofullständig översättning? Hjälp till att bidra med översättningar här:
-https://www.transifex.com/projects/p/reef/</translation>
+https://www.transifex.com/projects/p/cic/</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1182,8 +1182,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Reef network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara utdaterad. Din plånbok synkroniseras automatiskt med Reef-nätverket efter att en anslutning har etablerats men denna process har ännu inte slutförts.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Cic network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara utdaterad. Din plånbok synkroniseras automatiskt med Cic-nätverket efter att en anslutning har etablerats men denna process har ännu inte slutförts.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1238,8 +1238,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Mängd och omgångar:</translation>
     </message>
     <message>
-        <source>0 REEF / 0 Rounds</source>
-        <translation>0 REEF/0 omgångar</translation>
+        <source>0 CIC / 0 Rounds</source>
+        <translation>0 CIC/0 omgångar</translation>
     </message>
     <message>
         <source>Submitted Denom:</source>
@@ -1335,8 +1335,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Fel vid betalningsbegäran</translation>
     </message>
     <message>
-        <source>Cannot start reef: click-to-pay handler</source>
-        <translation>Kan inte starta reef: klicka-för-att-betala hanterare</translation>
+        <source>Cannot start cic: click-to-pay handler</source>
+        <translation>Kan inte starta cic: klicka-för-att-betala hanterare</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1435,8 +1435,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Antal anslutningar</translation>
     </message>
     <message>
-        <source>Open the Reef debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Öppna Reefs avsökningsloggfil från den nuvarande datakatalogen. Detta kan ta ett par sekunder för stora loggfiler.</translation>
+        <source>Open the Cic debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Öppna Cics avsökningsloggfil från den nuvarande datakatalogen. Detta kan ta ett par sekunder för stora loggfiler.</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1507,8 +1507,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Ut:</translation>
     </message>
     <message>
-        <source>Welcome to the Reef RPC console.</source>
-        <translation>Välkommen till Reefs RPC-konsol.</translation>
+        <source>Welcome to the Cic RPC console.</source>
+        <translation>Välkommen till Cics RPC-konsol.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1542,8 +1542,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Åt&amp;eranvänd en befintlig mottagaradress (rekommenderas inte)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Reef network.</source>
-        <translation>Ett valfritt meddelande att bifoga betalningsbegärandet vilket kommer att visas när begärandet öppnas. Observera: Meddelandet kommer inte att skickas med betalningen över Reef-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Cic network.</source>
+        <translation>Ett valfritt meddelande att bifoga betalningsbegärandet vilket kommer att visas när begärandet öppnas. Observera: Meddelandet kommer inte att skickas med betalningen över Cic-nätverket.</translation>
     </message>
     <message>
         <source>&amp;Message:</source>
@@ -1899,8 +1899,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Fel: Plånboken låstes upp enbart för att anonymisera mynt.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Reef address</source>
-        <translation>Varning: Ogiltig Reef-adress</translation>
+        <source>Warning: Invalid Cic address</source>
+        <translation>Varning: Ogiltig Cic-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1958,8 +1958,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Meddelande:</translation>
     </message>
     <message>
-        <source>A message that was attached to the reef: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Reef network.</source>
-        <translation>Ett meddelande som bifogades till Reef: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över Reef-nätverket.</translation>
+        <source>A message that was attached to the cic: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Cic network.</source>
+        <translation>Ett meddelande som bifogades till Cic: URI vilket kommer att lagras med transaktionen så att du vet. Observera: Meddelandet kommer inte att skickas över Cic-nätverket.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -1985,8 +1985,8 @@ https://www.transifex.com/projects/p/reef/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Reef Core is shutting down...</source>
-        <translation>Reef Core stängs ned...</translation>
+        <source>Cic Core is shutting down...</source>
+        <translation>Cic Core stängs ned...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2036,8 +2036,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Kopiera den nuvarande valda signaturen till systemurklippet</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Reef address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Reef-adress</translation>
+        <source>Sign the message to prove you own this Cic address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Cic-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2060,8 +2060,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Skriv in signeringsadressen, meddelandet, (försäkra dig om att du kopierar linjeavbrott, mellanslag, flikar med mera) och signera nedtill för att verifiera meddelandet. Var försiktig med att inte läsa in mer i signaturen än vad som finns i det signerade meddelandet för att undvika att bli lurad av en mellanhandattack.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Reef address</source>
-        <translation>Bekräfta meddelandet för att försäkra dig om att den signerades med den angivna Reef-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Cic address</source>
+        <translation>Bekräfta meddelandet för att försäkra dig om att den signerades med den angivna Cic-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2127,8 +2127,8 @@ https://www.transifex.com/projects/p/reef/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Reef Core</source>
-        <translation>Reef Core
+        <source>Cic Core</source>
+        <translation>Cic Core
 </translation>
     </message>
     <message>
@@ -2140,8 +2140,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Bitcoin Core-utvecklarna</translation>
     </message>
     <message>
-        <source>The Reef Core developers</source>
-        <translation>Reef Core-utvecklarna</translation>
+        <source>The Cic Core developers</source>
+        <translation>Cic Core-utvecklarna</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2656,14 +2656,14 @@ https://www.transifex.com/projects/p/reef/</translation>
     </message>
 </context>
 <context>
-    <name>reef-core</name>
+    <name>cic-core</name>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
         <translation>Sammanbind till fastställd adress och avlyssna alltid den. Använd [host]:port-notation för IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Reef Core is probably already running.</source>
-        <translation>Kan inte erhålla ett lås på datakatalog %s. Reef Core körs förmodligen redan.</translation>
+        <source>Cannot obtain a lock on data directory %s. Cic Core is probably already running.</source>
+        <translation>Kan inte erhålla ett lås på datakatalog %s. Cic Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -2718,16 +2718,16 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Detta är en förhandsutgiven testkompilering - använd på egen risk - använd inte för utvinning eller handlarapplikationer.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Reef Core is probably already running.</source>
-        <translation>Det går inte att binda till %s till denna dator. Reef Core körs förmodligen redan.</translation>
+        <source>Unable to bind to %s on this computer. Cic Core is probably already running.</source>
+        <translation>Det går inte att binda till %s till denna dator. Cic Core körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
         <translation>Kunde inte hitta tillräckliga Darksend-denominationsmedel för denna transaktion.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 REEF.</source>
-        <translation>Kunde inte hitta tillräckliga Darksend-icke-denominationsmedel för denna transaktion som inte är likvärdiga 1000 REEF.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 CIC.</source>
+        <translation>Kunde inte hitta tillräckliga Darksend-icke-denominationsmedel för denna transaktion som inte är likvärdiga 1000 CIC.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2942,8 +2942,8 @@ https://www.transifex.com/projects/p/reef/</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Reef Core is shutting down.</source>
-        <translation>Initialiseringstillståndkontroll misslyckades. Reef Core stängs ned.</translation>
+        <source>Initialization sanity check failed. Cic Core is shutting down.</source>
+        <translation>Initialiseringstillståndkontroll misslyckades. Cic Core stängs ned.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>

@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,7 @@
 #define BITCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reef-config.h"
+#include "config/cic-config.h"
 #endif
 
 #include "compat.h"
@@ -36,14 +36,14 @@
 
 // Uncomment the following line to enable debugging messages
 // or enable on a per file basis prior to inclusion of util.h
-//#define ENABLE_REEF_DEBUG
-#ifdef ENABLE_REEF_DEBUG
+//#define ENABLE_CIC_DEBUG
+#ifdef ENABLE_CIC_DEBUG
 #define DBG( x ) x
 #else
 #define DBG( x ) 
 #endif
 
-//Reef only features
+//Cic only features
 
 extern bool fMasterNode;
 extern bool fLiteMode;
@@ -251,7 +251,7 @@ std::string GetThreadName();
  */
 template <typename Callable> void TraceThread(const char* name,  Callable func)
 {
-    std::string s = strprintf("reef-%s", name);
+    std::string s = strprintf("cic-%s", name);
     RenameThread(s.c_str());
     try
     {

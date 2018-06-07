@@ -123,7 +123,7 @@ public:
 };
 
 /**
- * Reef RPC command dispatcher.
+ * Cic RPC command dispatcher.
  */
 class CRPCTable
 {

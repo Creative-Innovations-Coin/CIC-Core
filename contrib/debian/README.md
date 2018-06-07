@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package reefd/reef-qt
-for Debian-based Linux systems. If you compile reefd/reef-qt yourself, there are some useful files here.
+This directory contains files used to package cicd/cic-qt
+for Debian-based Linux systems. If you compile cicd/cic-qt yourself, there are some useful files here.
 
-## reef: URI support ##
+## cic: URI support ##
 
 
-reef-qt.desktop  (Gnome / Open Desktop)
+cic-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install reef-qt.desktop
+	sudo desktop-file-install cic-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your reef-qt binary to `/usr/bin`
-and the `../../share/pixmaps/reef128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your cic-qt binary to `/usr/bin`
+and the `../../share/pixmaps/cic128.png` to `/usr/share/pixmaps`
 
-reef-qt.protocol (KDE)
+cic-qt.protocol (KDE)
 

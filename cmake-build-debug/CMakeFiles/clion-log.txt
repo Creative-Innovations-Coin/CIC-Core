@@ -1,4 +1,4 @@
-C:\Users\chris\.CLion2018.1\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/chris/Desktop/reef/Reden
+C:\Users\chris\.CLion2018.1\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/chris/Desktop/cic/Reden
 -- The C compiler identification is unknown
 -- The CXX compiler identification is unknown
 CMake Error at CMakeLists.txt:2 (project):
@@ -18,5 +18,5 @@ CMake Error at CMakeLists.txt:2 (project):
 
 
 -- Configuring incomplete, errors occurred!
-See also "/cygdrive/c/Users/chris/Desktop/reef/Reden/cmake-build-debug/CMakeFiles/CMakeOutput.log".
-See also "/cygdrive/c/Users/chris/Desktop/reef/Reden/cmake-build-debug/CMakeFiles/CMakeError.log".
+See also "/cygdrive/c/Users/chris/Desktop/cic/Reden/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/cygdrive/c/Users/chris/Desktop/cic/Reden/cmake-build-debug/CMakeFiles/CMakeError.log".

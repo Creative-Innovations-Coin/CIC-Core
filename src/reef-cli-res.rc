@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Reef"
-            VALUE "FileDescription",    "reef-cli (JSON-RPC client for Reef Core)"
+            VALUE "CompanyName",        "Cic"
+            VALUE "FileDescription",    "cic-cli (JSON-RPC client for Cic Core)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "reef-cli"
+            VALUE "InternalName",       "cic-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "reef-cli.exe"
-            VALUE "ProductName",        "reef-cli"
+            VALUE "OriginalFilename",   "cic-cli.exe"
+            VALUE "ProductName",        "cic-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

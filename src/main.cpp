@@ -3,7 +3,7 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -60,7 +60,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "Reef Core cannot be compiled without assertions."
+# error "Cic Core cannot be compiled without assertions."
 #endif
 
 /**
@@ -120,7 +120,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "ReefCoin Signed Message:\n";
+const string strMessageMagic = "CicCoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1864,7 +1864,7 @@ if (nPrevHeight == 15) {
         nSubsidy -= nSubsidy * 0.25;
     }
 
-    return fSuperblockPartOnly ? 0 : nSubsidy; 
+    return fSuperblockPartOnly ? 0 : nSubsidy;
 }
 CAmount getblkreward(int nPrevHeight){
    CAmount blockReward = 0;
@@ -1884,7 +1884,7 @@ CAmount getblkreward(int nPrevHeight){
         nPOW =  5000 * COIN;
         blockReward = nPOW;
     }
-    
+
 if (nPrevHeight == 0) {
 	blockReward = 0;
 }
@@ -1957,29 +1957,29 @@ CAmount GetMainBlockReward(int nPrevHeight) {
         return 50 * COIN;
     }
     if (nPrevHeight == 15) {
-        return 16900000 * COIN; //premine
+        return 12000000 * COIN; //premine
     }
     CAmount blockReward;
-    if (nPrevHeight <= 3600){
+    if (nPrevHeight <= 3000){
         blockReward = 1;
-    } else if (nPrevHeight <= 3879){
+    } else if (nPrevHeight <= 4000){
         blockReward = 5;
     } else if (nPrevHeight <= 5000) {
-        blockReward = 5000;
+        blockReward = 1000;
     } else if (nPrevHeight <= 12800) {
-        blockReward = 4250;
+        blockReward = 1000;
     } else if (nPrevHeight <= 20600){
-        blockReward = 5750;
+        blockReward = 1750;
     } else if (nPrevHeight <= 50000){
-        blockReward = 5000;
+        blockReward = 1000;
     } else if (nPrevHeight <= 500000){
-        blockReward =  4375;
+        blockReward =  1000;
     } else if (nPrevHeight <= 1000000){
-        blockReward =  3750;
+        blockReward =  1750;
     } else if (nPrevHeight <= 3500000){
-        blockReward =  3125;
+        blockReward =  1125;
     } else if (nPrevHeight <= 5000000){
-        blockReward =  2500;
+        blockReward =  1500;
     } else if (nPrevHeight <= 7500000){
         blockReward =  1875;
     } else if (nPrevHeight <= 10000000){
@@ -2130,41 +2130,29 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockReward)
     //blockValue = ((nHeight % 100 == 0) && nHeight > 15799) ?  getblkreward(nHeight -1) : blockValue;
    //CAmount blockValue = (((nHeight - 1) % 100 == 0) && nHeight >13788) ?  getblkreward(nHeight -5) : blockReward;
    CAmount masterNodePayment = blockValue * 0.001;
-    if (nHeight > 5000 && nHeight < 50001){
-
-        masterNodePayment = blockValue * 0.15;
-    }
-    if (nHeight > 50000 && nHeight < 500001){
+    if (nHeight > 2160 && nHeight < 50001){
 
         masterNodePayment = blockValue * 0.25;
     }
-    if (nHeight > 500000 && nHeight < 1000001){
+    if (nHeight > 50000 && nHeight < 500001){
 
         masterNodePayment = blockValue * 0.35;
     }
-    if (nHeight > 1000000 && nHeight < 3500001){
+    if (nHeight > 500000 && nHeight < 1000001){
 
-        masterNodePayment = blockValue * 0.45;
+        masterNodePayment = blockValue * 0.5;
+    }
+    if (nHeight > 1000000 && nHeight < 5000001){
+
+        masterNodePayment = blockValue * 0.5;
     }
     if (nHeight > 3500000 && nHeight < 5000001){
 
-        masterNodePayment = blockValue * 0.55;
+        masterNodePayment = blockValue * 0.5;
     }
-    if (nHeight > 5000000 && nHeight < 7500001){
-
-        masterNodePayment = blockValue * 0.65;
-    }
-    if (nHeight > 7500000 && nHeight < 10000001){
+    if (nHeight > 5000000){
 
         masterNodePayment = blockValue * 0.75;
-    }
-    if (nHeight > 10000000 && nHeight < 12500001){
-
-        masterNodePayment = blockValue * 0.85;
-    }
-    if (nHeight > 12500000){
-
-        masterNodePayment = blockValue * 0.95;
     }
     return masterNodePayment;
 }
@@ -2778,7 +2766,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("reef-scriptch");
+    RenameThread("cic-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3175,7 +3163,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-    // REEF : MODIFIED TO CHECK MASTERNODE PAYMENTS AND SUPERBLOCKS
+    // CIC : MODIFIED TO CHECK MASTERNODE PAYMENTS AND SUPERBLOCKS
 
     // It's possible that we simply don't have enough data and this could fail
     // (i.e. block itself could be a correct one and we need to store it),
@@ -3186,18 +3174,18 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     CAmount blockReward = nFees + GetBlockSubsidy(pindex->pprev->nBits, pindex->pprev->nHeight, chainparams.GetConsensus());
     std::string strError = "";
     if (!IsBlockValueValid(block, pindex->nHeight, blockReward, strError)) {
-        return state.DoS(0, error("ConnectBlock(REEF): %s", strError), REJECT_INVALID, "bad-cb-amount");
+        return state.DoS(0, error("ConnectBlock(CIC): %s", strError), REJECT_INVALID, "bad-cb-amount");
     }
 
     if (!IsBlockPayeeValid(block.vtx[0], pindex->nHeight, blockReward)) {
         mapRejectedBlocks.insert(make_pair(block.GetHash(), GetTime()));
-        return state.DoS(0, error("ConnectBlock(REEF): couldn't find masternode or superblock payments"),
+        return state.DoS(0, error("ConnectBlock(CIC): couldn't find masternode or superblock payments"),
                                 REJECT_INVALID, "bad-cb-payee");
     }
-    // END REEF
+    // END CIC
     //if (!CheckDevFundPayment(block.vtx[0], pindex->nHeight)) {
       //  mapRejectedBlocks.insert(make_pair(block.GetHash(), GetTime()));
-      //  return state.DoS(0, error("ConnectBlock(REEF): couldn't find dev fund payment"),
+      //  return state.DoS(0, error("ConnectBlock(CIC): couldn't find dev fund payment"),
       //                              REJECT_INVALID, "bad-cb-dev-payee");
     //}
 
@@ -3269,7 +3257,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 bool CheckDevFundPayment(const CTransaction& txNew, int nBlockHeight) {
 /*    if (nBlockHeight >= Params().GetConsensus().nDevFundPaymentsStartBlock && !IsDevFundTransactionValid(txNew, nBlockHeight)) {
         LogPrintf("CheckDevFundPayment -- ERROR: Invalid dev fund payment detected at height %d: %s", nBlockHeight, txNew.ToString());
-        
+
         if (sporkManager.IsSporkActive(SPORK_16_DEVFUND_PAYMENT_ENFORCEMENT)) {
             return false;
         }
@@ -4177,7 +4165,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                              REJECT_INVALID, "bad-cb-multiple");
 
 
-    // REEF : CHECK TRANSACTIONS FOR INSTANTSEND
+    // CIC : CHECK TRANSACTIONS FOR INSTANTSEND
 
     if(sporkManager.IsSporkActive(SPORK_3_INSTANTSEND_BLOCK_FILTERING)) {
         // We should never accept block which conflicts with completed transaction lock,
@@ -4197,17 +4185,17 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                     instantsend.Relay(hashLocked);
                     LOCK(cs_main);
                     mapRejectedBlocks.insert(make_pair(block.GetHash(), GetTime()));
-                    return state.DoS(0, error("CheckBlock(REEF): transaction %s conflicts with transaction lock %s",
+                    return state.DoS(0, error("CheckBlock(CIC): transaction %s conflicts with transaction lock %s",
                                                 tx.GetHash().ToString(), hashLocked.ToString()),
                                      REJECT_INVALID, "conflict-tx-lock");
                 }
             }
         }
     } else {
-        LogPrintf("CheckBlock(REEF): spork is off, skipping transaction locking checks\n");
+        LogPrintf("CheckBlock(CIC): spork is off, skipping transaction locking checks\n");
     }
 
-    // END REEF
+    // END CIC
 
     // Check transactions
     BOOST_FOREACH(const CTransaction& tx, block.vtx)
@@ -5409,7 +5397,7 @@ bool static AlreadyHave(const CInv& inv) EXCLUSIVE_LOCKS_REQUIRED(cs_main)
         return mapBlockIndex.count(inv.hash);
 
     /*
-        Reef Related Inventory Messages
+        Cic Related Inventory Messages
 
         --
 

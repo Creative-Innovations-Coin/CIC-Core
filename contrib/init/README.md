@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: reefd.service
-Upstart: reefd.conf
-OpenRC:  reefd.openrc
-         reefd.openrcconf
-CentOS:  reefd.init
-OS X:    org.reef.reefd.plist
+SystemD: cicd.service
+Upstart: cicd.conf
+OpenRC:  cicd.openrc
+         cicd.openrcconf
+CentOS:  cicd.init
+OS X:    org.cic.cicd.plist
 
 have been made available to assist packagers in creating node packages here.
 

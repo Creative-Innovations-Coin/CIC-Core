@@ -1,6 +1,6 @@
 all:
-	$(MAKE) -C .. reef_test
+	$(MAKE) -C .. cic_test
 clean:
-	$(MAKE) -C .. reef_test_clean
+	$(MAKE) -C .. cic_test_clean
 check:
-	$(MAKE) -C .. reef_test_check
+	$(MAKE) -C .. cic_test_check

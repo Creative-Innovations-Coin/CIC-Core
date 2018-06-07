@@ -1,11 +1,11 @@
-Reef Core 1.0.0
+Cic Core 1.0.0
 =====================
 
-This is the official reference wallet for Reef digital currency and comprises the backbone of the Reef peer-to-peer network. You can [download Reef Core](https://reefcoin.io) or [build it yourself](#building) using the guides below.
+This is the official reference wallet for Cic digital currency and comprises the backbone of the Cic peer-to-peer network. You can [download Cic Core](https://ciccoin.io) or [build it yourself](#building) using the guides below.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Reef on your native platform.
+The following are some helpful notes on how to run Cic on your native platform.
 
 ### Unix
 
@@ -16,22 +16,22 @@ Unpack the files into a directory and run:
 
 ### Windows
 
-Unpack the files into a directory, and then run reef-qt.exe.
+Unpack the files into a directory, and then run cic-qt.exe.
 
 ### OS X
 
-Drag Reef-Qt to your applications folder, and then run Reef-Qt.
+Drag Cic-Qt to your applications folder, and then run Cic-Qt.
 
 ### Need Help?
 
-* See the [Reef documentation](https://reefcoin.atlassian.net/wiki/display/DOC)
+* See the [Cic documentation](https://ciccoin.atlassian.net/wiki/display/DOC)
 for help and more information.
-* Ask for help on [#reefcoin](http://webchat.freenode.net?channels=reefcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=reefcoin).
-* Ask for help on the [ReefTalk](https://reeftalk.org/) forums.
+* Ask for help on [#ciccoin](http://webchat.freenode.net?channels=ciccoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=ciccoin).
+* Ask for help on the [CicTalk](https://cictalk.org/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Reef Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Cic Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -41,7 +41,7 @@ The following are developer notes on how to build Reef Core on your native platf
 
 Development
 ---------------------
-The Reef Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Cic Core repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -57,8 +57,8 @@ The Reef Core repo's [root README](/README.md) contains relevant information on 
 - [Dnsseed Policy](dnsseed-policy.md)
 
 ### Resources
-* Discuss on the [ReefTalk](https://reeftalk.org/) forums, in the Development & Technical Discussion board.
-* Discuss on [#reefcoin](http://webchat.freenode.net/?channels=reefcoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=reefcoin).
+* Discuss on the [CicTalk](https://cictalk.org/) forums, in the Development & Technical Discussion board.
+* Discuss on [#ciccoin](http://webchat.freenode.net/?channels=ciccoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=ciccoin).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

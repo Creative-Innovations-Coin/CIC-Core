@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2014-2018 The Reef Core developers
+// Copyright (c) 2014-2018 The Cic Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -66,7 +66,7 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 60000; // every130k blocks
-        consensus.nMasternodePaymentsStartBlock = 2; // block after premine
+        consensus.nMasternodePaymentsStartBlock = 2160; // block after premine
         consensus.nMasternodePaymentsIncreaseBlock = 1528388100; // not used
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // not used
         consensus.nInstantSendKeepLock = 24;
@@ -85,9 +85,8 @@ public:
         consensus.BIP34Height = 227931; // FIX
         consensus.BIP34Hash = uint256S("0x000000000000024b89b42a942fe0d9fea3bb44ab7bd1b19115dd6a759c0808b8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        //consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-	consensus.nPowTargetTimespan = 1 * 60; // Reef: every blocks
-        consensus.nPowTargetSpacing = 1 * 60; // Reef: 1 minutes
+        	consensus.nPowTargetTimespan = 1 * 60; // Cic: every blocks
+        consensus.nPowTargetSpacing = 2 * 60; // Cic: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
@@ -120,9 +119,9 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1528388100, 0, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1528388100, 217307, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-
+/*
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -162,25 +161,25 @@ public:
 
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-
-    //    assert(consensus.hashGenesisBlock == uint256S("0000087b582c43136586c1cbe4ad35461c5d3022d78d0127ba3013bd23d2e278"));
-    //    assert(genesis.hashMerkleRoot == uint256S("9b16e2d18fb3b14973933a16c5b64f7790d8cd6e17e60a0086f456915ab8152b"));
+*/
+        assert(consensus.hashGenesisBlock == uint256S("0000070a19c583431e36c438008d0528c69a46d2cbe0d5748f02c4a631a1f52f"));
+        assert(genesis.hashMerkleRoot == uint256S("853998cdea8cc791f43ef87f4a4e5da38e49943f967beb122d19aa642693341c"));
 
         vSeeds.push_back(CDNSSeedData("alpha.creativecoin.design", "alpha.creativecoin.design"));
         vSeeds.push_back(CDNSSeedData("beta.creativecoin.design", "beta.creativecoin.design"));
         vSeeds.push_back(CDNSSeedData("gamma.creativecoin.design", "gamma.creativecoin.design"));
 
-        // Reef addresses start with 'R'
+        // Cic addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
-        // Reef script addresses start with '7'
+        // Cic script addresses start with '7'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,87);
-        // Reef private keys start with 'E'
+        // Cic private keys start with 'E'
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
-        // Reef BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Cic BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Reef BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Cic BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // Reef BIP44 coin type is '5'
+        // Cic BIP44 coin type is '5'
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x05).convert_to_container<std::vector<unsigned char> >();
 
         fMiningRequiresPeers = true;
@@ -196,7 +195,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x")),
+            ( 0, uint256S("853998cdea8cc791f43ef87f4a4e5da38e49943f967beb122d19aa642693341c")),
             1528388100, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
@@ -233,8 +232,8 @@ public:
         consensus.BIP34Height = 21111; // FIX
         consensus.BIP34Hash = uint256S("0x0000000023b3a96d3484e5abb3755c413e7d41500f8e2a5c3f0dd01299cd8ef8"); // FIX
         consensus.powLimit = uint256S("00000fffff000000000000000000000000000000000000000000000000000000");
-        consensus.nPowTargetTimespan = 60 * 60; // Reef: 1 hour
-        consensus.nPowTargetSpacing = 2 * 60; // Reef: 2 minutes
+        consensus.nPowTargetTimespan = 60 * 60; // Cic: 1 hour
+        consensus.nPowTargetSpacing = 2 * 60; // Cic: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
@@ -267,17 +266,17 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        // Testnet Reef addresses start with 'R'
+        // Testnet Cic addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,61);
-        // Testnet Reef script addresses start with '5'
+        // Testnet Cic script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
         // Testnet private keys start with '5' or 'n' (Bitcoin defaults) (?)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,33);
-        // Testnet Reef BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Cic BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Reef BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Cic BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Reef BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet Cic BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
@@ -333,8 +332,8 @@ public:
         consensus.BIP34Height = -1; // BIP34 has not necessarily activated on regtest
         consensus.BIP34Hash = uint256();
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 60 * 60; // Reef: 1 hour
-        consensus.nPowTargetSpacing = 2 * 60; // Reef: 2 minutes
+        consensus.nPowTargetTimespan = 60 * 60; // Cic: 1 hour
+        consensus.nPowTargetSpacing = 2 * 60; // Cic: 2 minutes
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nRuleChangeActivationThreshold = 108; // 75% for testchains
@@ -378,17 +377,17 @@ public:
             0,
             0
         };
-        // Regtest Reef addresses start with 'n'
+        // Regtest Cic addresses start with 'n'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,112);
-        // Regtest Reef script addresses start with '5'
+        // Regtest Cic script addresses start with '5'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,10);
         // Regtest private keys start with '5' or 'c' (Bitcoin defaults) (?)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,240);
-        // Regtest Reef BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Regtest Cic BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Reef BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Regtest Cic BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Regtest Reef BIP44 coin type is '1' (All coin's testnet default)
+        // Regtest Cic BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
    }
 };
@@ -422,7 +421,7 @@ void SelectParams(const std::string& network)
 CScript CChainParams::getFoundersAddress(const std::string& foundersaddress){
 CBitcoinAddress address = CBitcoinAddress(foundersaddress);
 // if (!address.IsValid())
-//     throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Reef address");
+//     throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Cic address");
  CScript scriptPubKey = GetScriptForDestination(address.Get());
 
     return scriptPubKey;

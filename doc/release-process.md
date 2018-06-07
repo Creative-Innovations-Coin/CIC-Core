@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/reefcoin/reef/blob/master/doc/translation_process.md#syncing-with-transifex)
+* Update translations, see [translation_process.md](https://github.com/ciccoin/cic/blob/master/doc/translation_process.md#syncing-with-transifex)
 * Update hardcoded [seeds](/contrib/seeds)
 
 * * *
@@ -10,14 +10,14 @@ Release Process
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/reefcoin/gitian.sigs.git
-	git clone https://github.com/reefcoin/reefcoin-detached-sigs.git
+	git clone https://github.com/ciccoin/gitian.sigs.git
+	git clone https://github.com/ciccoin/ciccoin-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/reefcoin/reefcoin.git
+	git clone https://github.com/ciccoin/ciccoin.git
 
-###Reef Core maintainers/release engineers, update (commit) version in sources
+###Cic Core maintainers/release engineers, update (commit) version in sources
 
-	pushd ./reef
+	pushd ./cic
 	contrib/verifysfbinaries/verify.sh
 	configure.ac
 	doc/README*
@@ -40,7 +40,7 @@ Check out the source code in the following directory hierarchy.
 
  Setup Gitian descriptors:
 
-	pushd ./reef
+	pushd ./cic
 	export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
 	git fetch
@@ -76,52 +76,52 @@ Check out the source code in the following directory hierarchy.
 
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
-	make -C ../reef/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../cic/depends download SOURCES_PATH=`pwd`/cache/common
 
 Only missing files will be fetched, so this is safe to re-run for each build.
 
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 ```
-./bin/gbuild --url reef=/path/to/reef,signature=/path/to/sigs {rest of arguments}
+./bin/gbuild --url cic=/path/to/cic,signature=/path/to/sigs {rest of arguments}
 ```
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-###Build and sign Reef Core for Linux, Windows, and OS X:
+###Build and sign Cic Core for Linux, Windows, and OS X:
 
-	./bin/gbuild --commit reef=v${VERSION} ../reef/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../reef/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/reef-*.tar.gz build/out/src/reef-*.tar.gz ../
+	./bin/gbuild --commit cic=v${VERSION} ../cic/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../cic/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/cic-*.tar.gz build/out/src/cic-*.tar.gz ../
 
-	./bin/gbuild --commit reef=v${VERSION} ../reef/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../reef/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/reef-*-win-unsigned.tar.gz inputs/reef-win-unsigned.tar.gz
-	mv build/out/reef-*.zip build/out/reef-*.exe ../
+	./bin/gbuild --commit cic=v${VERSION} ../cic/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../cic/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/cic-*-win-unsigned.tar.gz inputs/cic-win-unsigned.tar.gz
+	mv build/out/cic-*.zip build/out/cic-*.exe ../
 
-	./bin/gbuild --commit reef=v${VERSION} ../reef/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../reef/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/reef-*-osx-unsigned.tar.gz inputs/reef-osx-unsigned.tar.gz
-	mv build/out/reef-*.tar.gz build/out/reef-*.dmg ../
+	./bin/gbuild --commit cic=v${VERSION} ../cic/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../cic/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/cic-*-osx-unsigned.tar.gz inputs/cic-osx-unsigned.tar.gz
+	mv build/out/cic-*.tar.gz build/out/cic-*.dmg ../
 	popd
 
   Build output expected:
 
-  1. source tarball (reef-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit dist tarballs (reef-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (reef-${VERSION}-win[32|64]-setup-unsigned.exe, reef-${VERSION}-win[32|64].zip)
-  4. OS X unsigned installer and dist tarball (reef-${VERSION}-osx-unsigned.dmg, reef-${VERSION}-osx64.tar.gz)
+  1. source tarball (cic-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit dist tarballs (cic-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (cic-${VERSION}-win[32|64]-setup-unsigned.exe, cic-${VERSION}-win[32|64].zip)
+  4. OS X unsigned installer and dist tarball (cic-${VERSION}-osx-unsigned.dmg, cic-${VERSION}-osx64.tar.gz)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/
 
 ###Verify other gitian builders signatures to your own. (Optional)
 
   Add other gitian builders keys to your gpg keyring
 
-	gpg --import ../reef/contrib/gitian-downloader/*.pgp
+	gpg --import ../cic/contrib/gitian-downloader/*.pgp
 
   Verify the signatures
 
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../reef/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../reef/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../reef/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../cic/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../cic/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../cic/contrib/gitian-descriptors/gitian-osx.yml
 
 	popd
 
@@ -139,25 +139,25 @@ Commit your signature to gitian.sigs:
 
   Wait for Windows/OS X detached signatures:
 	Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-	Detached signatures will then be committed to the [reefcoin-detached-sigs](https://github.com/reefcoin/reefcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+	Detached signatures will then be committed to the [ciccoin-detached-sigs](https://github.com/ciccoin/ciccoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
   Create (and optionally verify) the signed OS X binary:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../reef/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../reef/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../reef/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/reef-osx-signed.dmg ../reef-${VERSION}-osx.dmg
+	./bin/gbuild -i --commit signature=v${VERSION} ../cic/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../cic/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../cic/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/cic-osx-signed.dmg ../cic-${VERSION}-osx.dmg
 	popd
 
   Create (and optionally verify) the signed Windows binaries:
 
 	pushd ./gitian-builder
-	./bin/gbuild -i --commit signature=v${VERSION} ../reef/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../reef/contrib/gitian-descriptors/gitian-win-signer.yml
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../reef/contrib/gitian-descriptors/gitian-win-signer.yml
-	mv build/out/reef-*win64-setup.exe ../reef-${VERSION}-win64-setup.exe
-	mv build/out/reef-*win32-setup.exe ../reef-${VERSION}-win32-setup.exe
+	./bin/gbuild -i --commit signature=v${VERSION} ../cic/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../cic/contrib/gitian-descriptors/gitian-win-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../cic/contrib/gitian-descriptors/gitian-win-signer.yml
+	mv build/out/cic-*win64-setup.exe ../cic-${VERSION}-win64-setup.exe
+	mv build/out/cic-*win32-setup.exe ../cic-${VERSION}-win32-setup.exe
 	popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -182,18 +182,18 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the reefcoin.info server
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the ciccoin.info server
 
-- Update reefcoin.info
+- Update ciccoin.info
 
 - Announce the release:
-  - Reef-development mailing list
+  - Cic-development mailing list
 
-  - Update title of #reefcoin on Freenode IRC
+  - Update title of #ciccoin on Freenode IRC
 
-  - Optionally reddit /r/Reefpay, ... but this will usually sort out itself
+  - Optionally reddit /r/Cicpay, ... but this will usually sort out itself
 
-- Notify flare so that he can start building [the PPAs](https://launchpad.net/~reefcoin.info/+archive/ubuntu/reef)
+- Notify flare so that he can start building [the PPAs](https://launchpad.net/~ciccoin.info/+archive/ubuntu/cic)
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

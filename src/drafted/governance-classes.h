@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 
 /*
  * FIELDS AND CLASSIFICATION
@@ -46,7 +46,7 @@
  * =========================
  *
  *   // network
- *   CReefNetwork lvl, network-type, network-status, network-error, milestone-status*
+ *   CCicNetwork lvl, network-type, network-status, network-error, milestone-status*
  *   CCategory lvl, category-type, status, status-error
  *   CNetworkGlobalVariable lvl, global-type, status, status-error
  *   // base: actor
@@ -80,7 +80,7 @@
  *  TREE STRUCTURE
  *  ===========================================
  * 
- *  REEF NETWORK (ROOT)
+ *  CIC NETWORK (ROOT)
  *      -> NETWORK GLOBOLS
  *          -> SWITCHES, SETTINGS
  *      -> CATEGORIES
@@ -118,7 +118,7 @@ private:
     int nLevel;
     std::string strCategory;
 
-    // Current OBJECT STATUS (see http://govman.reefcoin.info/index.php/Documentation_:_Status_Field)
+    // Current OBJECT STATUS (see http://govman.ciccoin.info/index.php/Documentation_:_Status_Field)
     int nStatusID;
     std::string strStatusMessage;
 
@@ -131,7 +131,7 @@ public:
 };
 
 // // root node
-class CReefNetwork : public CGovernanceObject
+class CCicNetwork : public CGovernanceObject
 {
 private:
     std::string strName;
@@ -139,7 +139,7 @@ private:
 
 
 public:
-    CReefNetwork(UniValue objIn)
+    CCicNetwork(UniValue objIn)
     {
         strName = objIn["name"].get_str();
         strURL = objIn["name"].get_str();
@@ -175,9 +175,9 @@ public:
 
 };
 
-// // can be under: ReefNetwork
+// // can be under: CicNetwork
 // //   -- signature requirements : Key1(User)
-// class CReefNetworkVariable : public CGovernanceObject
+// class CCicNetworkVariable : public CGovernanceObject
 // {
 // private:
 
@@ -280,7 +280,7 @@ public:
 //     // isRootCategory()
 //     // {
 //     //     // root categories won't have categories as parents
-//     //     return (IsType() == ReefNetwork);
+//     //     return (IsType() == CicNetwork);
 //     // }
 
 //     // isSubcategoryOf(std::string strParentName)

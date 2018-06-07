@@ -1,6 +1,6 @@
 [Protocol]
-exec=reef-qt '%u'
-protocol=reef
+exec=cic-qt '%u'
+protocol=cic
 input=none
 output=none
 helper=true

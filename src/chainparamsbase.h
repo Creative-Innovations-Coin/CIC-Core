@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between reef-cli and reefd)
- * of a given instance of the Reef system.
+ * CBaseChainParams defines the base parameters (shared between cic-cli and cicd)
+ * of a given instance of the Cic system.
  */
 class CBaseChainParams
 {

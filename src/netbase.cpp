@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #ifdef HAVE_CONFIG_H
-#include "config/reef-config.h"
+#include "config/cic-config.h"
 #endif
 
 #include "netbase.h"
@@ -284,14 +284,14 @@ bool static InterruptibleRecv(char* data, size_t len, int timeout, SOCKET& hSock
     return len == 0;
 }
 
-struct ProxyCreeftials
+struct ProxyCcictials
 {
     std::string username;
     std::string password;
 };
 
 /** Connect using SOCKS5 (as described in RFC1928) */
-static bool Socks5(const std::string& strDest, int port, const ProxyCreeftials *auth, SOCKET& hSocket)
+static bool Socks5(const std::string& strDest, int port, const ProxyCcictials *auth, SOCKET& hSocket)
 {
     LogPrintf("SOCKS5 connecting %s\n", strDest);
     if (strDest.size() > 255) {
@@ -573,8 +573,8 @@ static bool ConnectThroughProxy(const proxyType &proxy, const std::string& strDe
         return false;
     }
     // do socks negotiation
-    if (proxy.randomize_creeftials) {
-        ProxyCreeftials random_auth;
+    if (proxy.randomize_ccictials) {
+        ProxyCcictials random_auth;
         random_auth.username = strprintf("%i", insecure_rand());
         random_auth.password = strprintf("%i", insecure_rand());
         if (!Socks5(strDest, (unsigned short)port, &random_auth, hSocket))

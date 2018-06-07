@@ -137,7 +137,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../reef.qrc"/>
+  <include location="../cic.qrc"/>
  </resources>
  <connections/>
 </ui>

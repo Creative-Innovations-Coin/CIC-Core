@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.reef.Reef-Qt";
+        return @"org.cic.Cic-Qt";
     } else {
         return [self __bundleIdentifier];
     }

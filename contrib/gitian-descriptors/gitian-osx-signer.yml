@@ -1,5 +1,5 @@
 ---
-name: "reef-dmg-signer"
+name: "cic-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -8,10 +8,10 @@ packages:
 - "faketime"
 reference_datetime: "2017-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/reefcoin/reefcoin-detached-sigs.git"
+- "url": "https://github.com/ciccoin/ciccoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "reef-osx-unsigned.tar.gz"
+- "cic-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -28,10 +28,10 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=reef-osx-unsigned.tar.gz
-  SIGNED=reef-osx-signed.dmg
+  UNSIGNED=cic-osx-unsigned.tar.gz
+  SIGNED=cic-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   ./detached-sig-apply.sh ${UNSIGNED} signature/osx
-  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "Reef-Core" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
+  ${WRAP_DIR}/genisoimage -no-cache-inodes -D -l -probe -V "Cic-Core" -no-pad -r -dir-mode 0755 -apple -o uncompressed.dmg signed-app
   ${WRAP_DIR}/dmg dmg uncompressed.dmg ${OUTDIR}/${SIGNED}

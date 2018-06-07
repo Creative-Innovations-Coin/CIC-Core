@@ -175,7 +175,7 @@ Thanks to everyone who contributed to this release:
 - jtimon
 - Kamil Domanski
 - langerhans
-- Luke Reefjr
+- Luke Cicjr
 - Manuel Araoz
 - Mark Friedenbach
 - Matt Corallo

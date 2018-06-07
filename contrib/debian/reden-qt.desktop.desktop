@@ -1,11 +1,11 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Reef
-Comment=Reef P2P Cryptocurrency
-Exec=reef-qt %u
+Name=Cic
+Comment=Cic P2P Cryptocurrency
+Exec=cic-qt %u
 Terminal=false
 Type=Application
-Icon=reef128
-MimeType=x-scheme-handler/reef;
+Icon=cic128
+MimeType=x-scheme-handler/cic;
 Categories=Office;Finance;
-Name[en_US]=reef-qt.desktop
+Name[en_US]=cic-qt.desktop

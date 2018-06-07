@@ -1,6 +1,6 @@
-usr/local/bin/reef-qt usr/bin
-share/pixmaps/reef32.xpm usr/share/pixmaps
-share/pixmaps/reef16.xpm usr/share/pixmaps
-share/pixmaps/reef128.png usr/share/pixmaps
-debian/reef-qt.desktop usr/share/applications
-debian/reef-qt.protocol usr/share/kde4/services/
+usr/local/bin/cic-qt usr/bin
+share/pixmaps/cic32.xpm usr/share/pixmaps
+share/pixmaps/cic16.xpm usr/share/pixmaps
+share/pixmaps/cic128.png usr/share/pixmaps
+debian/cic-qt.desktop usr/share/applications
+debian/cic-qt.protocol usr/share/kde4/services/

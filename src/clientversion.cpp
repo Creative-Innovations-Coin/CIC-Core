@@ -10,10 +10,10 @@
 
 /**
  * Name of client reported in the 'version' message. Report the same name
- * for both reefd and reef-qt, to make it harder for attackers to
+ * for both cicd and cic-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Reef Core");
+const std::string CLIENT_NAME("Cic Core");
 
 /**
  * Client version number

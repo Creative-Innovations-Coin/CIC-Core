@@ -1,9 +1,9 @@
 // Copyright (c) 2014-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 
 #include "governance.h"
 
-#include "test/test_reef.h"
+#include "test/test_cic.h"
 
 #include <boost/test/unit_test.hpp>
 

@@ -442,11 +442,11 @@
       <find>R</find>
     </findStrings>
     <replaceStrings>
-      <replace>reef</replace>
+      <replace>cic</replace>
       <replace />
     </replaceStrings>
     <dirStrings>
-      <dir>C:\Users\chris\Desktop\reef\Reden</dir>
+      <dir>C:\Users\chris\Desktop\cic\Reden</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">

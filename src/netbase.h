@@ -6,7 +6,7 @@
 #define BITCOIN_NETBASE_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reef-config.h"
+#include "config/cic-config.h"
 #endif
 
 #include "compat.h"
@@ -188,13 +188,13 @@ class CService : public CNetAddr
 class proxyType
 {
 public:
-    proxyType(): randomize_creeftials(false) {}
-    proxyType(const CService &proxy, bool randomize_creeftials=false): proxy(proxy), randomize_creeftials(randomize_creeftials) {}
+    proxyType(): randomize_ccictials(false) {}
+    proxyType(const CService &proxy, bool randomize_ccictials=false): proxy(proxy), randomize_ccictials(randomize_ccictials) {}
 
     bool IsValid() const { return proxy.IsValid(); }
 
     CService proxy;
-    bool randomize_creeftials;
+    bool randomize_ccictials;
 };
 
 enum Network ParseNetwork(std::string net);

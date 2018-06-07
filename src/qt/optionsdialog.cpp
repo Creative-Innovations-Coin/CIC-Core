@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/reef-config.h"
+#include "config/cic-config.h"
 #endif
 
 #include "optionsdialog.h"
@@ -90,10 +90,10 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
     
     /* Theme selector */
-    ui->theme->addItem(QString("REEF-light"), QVariant("light"));
-    ui->theme->addItem(QString("REEF-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("REEF-Crownium"), QVariant("crownium"));
-    ui->theme->addItem(QString("REEF-traditional"), QVariant("trad"));
+    ui->theme->addItem(QString("CIC-light"), QVariant("light"));
+    ui->theme->addItem(QString("CIC-blue"), QVariant("drkblue"));
+    ui->theme->addItem(QString("CIC-Crownium"), QVariant("crownium"));
+    ui->theme->addItem(QString("CIC-traditional"), QVariant("trad"));
     
     /* Language selector */
     QDir translations(":translations");

@@ -1,32 +1,32 @@
 
-Reef Core 1.0.0
+Cic Core 1.0.0
 ===============================
 
-https://reefcoin.io
+https://ciccoin.io
 
 
-What is Reef?
+What is Cic?
 ----------------
 
-Reef-Coin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
+Cic-Coin is a fully decentralised cryptocurrency built on the premise of providing anonymity, speed, fair mining by being ASIC-resistant and reliability by the usage of Masternodes.
 
 
 For more information, as well as an immediately usable, binary version of
-the Reef Core software, see https://reef.io
+the Cic Core software, see https://cic.io
 
 
 License
 -------
 
-Reef Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Cic Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate bran
-[Tags](https://github.com/Reef/Reef/tags) are created to indicate new official,l.0.0
-stable release versions of Reef Core.
+[Tags](https://github.com/Cic/Cic/tags) are created to indicate new official,l.0.0
+stable release versions of Cic Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -58,4 +58,4 @@ code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
 
-# ReefCore
+# CicCore

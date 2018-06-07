@@ -4,7 +4,7 @@ if [ -d "$1" ]; then
   cd "$1"
 else
   echo "Usage: $0 <datadir>" >&2
-  echo "Removes obsolete Reef database files" >&2
+  echo "Removes obsolete Cic database files" >&2
   exit 1
 fi
 
@@ -16,22 +16,22 @@ if [ -f wallet.dat -a -f peers.dat -a -f chainstate/CURRENT -a -f blocks/index/C
 
 case $LEVEL in
   0)
-    echo "Error: no Reef datadir detected."
+    echo "Error: no Cic datadir detected."
     exit 1
     ;;
   1)
-    echo "Detected old Reef datadir (before 0.7)."
+    echo "Detected old Cic datadir (before 0.7)."
     echo "Nothing to do."
     exit 0
     ;;
   2)
-    echo "Detected Reef 0.7 datadir."
+    echo "Detected Cic 0.7 datadir."
     ;;
   3)
-    echo "Detected Reef pre-0.8 datadir."
+    echo "Detected Cic pre-0.8 datadir."
     ;;
   4)
-    echo "Detected Reef 0.8 datadir."
+    echo "Detected Cic 0.8 datadir."
     ;;
 esac
 

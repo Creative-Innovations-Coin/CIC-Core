@@ -6,7 +6,7 @@
         <df name="bench">
           <in>Examples.cpp</in>
           <in>bench.cpp</in>
-          <in>bench_reef.cpp</in>
+          <in>bench_cic.cpp</in>
         </df>
         <df name="compat">
           <in>glibc_compat.cpp</in>
@@ -205,8 +205,8 @@
           <in>receivecoinsdialog.cpp</in>
           <in>receiverequestdialog.cpp</in>
           <in>recentrequeststablemodel.cpp</in>
-          <in>reef.cpp</in>
-          <in>reefstrings.cpp</in>
+          <in>cic.cpp</in>
+          <in>cicstrings.cpp</in>
           <in>rpcconsole.cpp</in>
           <in>sendcoinsdialog.cpp</in>
           <in>sendcoinsentry.cpp</in>
@@ -314,7 +314,7 @@
           <in>sigopcount_tests.cpp</in>
           <in>skiplist_tests.cpp</in>
           <in>streams_tests.cpp</in>
-          <in>test_reef.cpp</in>
+          <in>test_cic.cpp</in>
           <in>timedata_tests.cpp</in>
           <in>transaction_tests.cpp</in>
           <in>txvalidationcache_tests.cpp</in>
@@ -402,9 +402,9 @@
         <in>protocol.cpp</in>
         <in>pubkey.cpp</in>
         <in>random.cpp</in>
-        <in>reef-cli.cpp</in>
-        <in>reef-tx.cpp</in>
-        <in>reefd.cpp</in>
+        <in>cic-cli.cpp</in>
+        <in>cic-tx.cpp</in>
+        <in>cicd.cpp</in>
         <in>rest.cpp</in>
         <in>rpcblockchain.cpp</in>
         <in>rpcclient.cpp</in>
@@ -491,7 +491,7 @@
       </item>
       <item path="src/bench/bench.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/bench/bench_reef.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/bench/bench_cic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/bloom.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -919,9 +919,9 @@
             tool="1"
             flavor2="0">
       </item>
-      <item path="src/qt/reef.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/qt/cic.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/qt/reefstrings.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/qt/cicstrings.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/qt/rpcconsole.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -969,11 +969,11 @@
       </item>
       <item path="src/random.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/reef-cli.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/cic-cli.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/reef-tx.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/cic-tx.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/reefd.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/cicd.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/rest.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -1169,7 +1169,7 @@
       </item>
       <item path="src/test/streams_tests.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="src/test/test_reef.cpp" ex="false" tool="1" flavor2="0">
+      <item path="src/test/test_cic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/test/timedata_tests.cpp" ex="false" tool="1" flavor2="0">
       </item>

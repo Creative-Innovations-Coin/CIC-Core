@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,9 +21,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(REEF);
-    unitlist.append(mREEF);
-    unitlist.append(uREEF);
+    unitlist.append(CIC);
+    unitlist.append(mCIC);
+    unitlist.append(uCIC);
     unitlist.append(duffs);
     return unitlist;
 }
@@ -32,9 +32,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case REEF:
-    case mREEF:
-    case uREEF:
+    case CIC:
+    case mCIC:
+    case uCIC:
     case duffs:
         return true;
     default:
@@ -48,9 +48,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case REEF: return QString("REEF");
-            case mREEF: return QString("mREEF");
-            case uREEF: return QString::fromUtf8("μREEF");
+            case CIC: return QString("CIC");
+            case mCIC: return QString("mCIC");
+            case uCIC: return QString::fromUtf8("μCIC");
             case duffs: return QString("duffs");
             default: return QString("???");
         }
@@ -59,9 +59,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case REEF: return QString("tREEF");
-            case mREEF: return QString("mtREEF");
-            case uREEF: return QString::fromUtf8("μtREEF");
+            case CIC: return QString("tCIC");
+            case mCIC: return QString("mtCIC");
+            case uCIC: return QString::fromUtf8("μtCIC");
             case duffs: return QString("tduffs");
             default: return QString("???");
         }
@@ -74,10 +74,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case REEF: return QString("Reef");
-            case mREEF: return QString("Milli-Reef (1 / 1" THIN_SP_UTF8 "000)");
-            case uREEF: return QString("Micro-Reef (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-Reef (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case CIC: return QString("Cic");
+            case mCIC: return QString("Milli-Cic (1 / 1" THIN_SP_UTF8 "000)");
+            case uCIC: return QString("Micro-Cic (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-Cic (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -85,10 +85,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case REEF: return QString("TestReefs");
-            case mREEF: return QString("Milli-TestReef (1 / 1" THIN_SP_UTF8 "000)");
-            case uREEF: return QString("Micro-TestReef (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestReef (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case CIC: return QString("TestCics");
+            case mCIC: return QString("Milli-TestCic (1 / 1" THIN_SP_UTF8 "000)");
+            case uCIC: return QString("Micro-TestCic (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case duffs: return QString("Ten Nano-TestCic (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -98,9 +98,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case REEF:  return 100000000;
-    case mREEF: return 100000;
-    case uREEF: return 100;
+    case CIC:  return 100000000;
+    case mCIC: return 100000;
+    case uCIC: return 100;
     case duffs: return 1;
     default:   return 100000000;
     }
@@ -110,9 +110,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case REEF: return 8;
-    case mREEF: return 5;
-    case uREEF: return 2;
+    case CIC: return 8;
+    case mCIC: return 5;
+    case uCIC: return 2;
     case duffs: return 0;
     default: return 0;
     }

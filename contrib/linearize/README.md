@@ -1,9 +1,9 @@
 # Linearize
 Construct a linear, no-fork, best version of the blockchain.
 
-## Step 0: Install reef_hash
+## Step 0: Install cic_hash
 
-https://github.com/reefcoin/reef_hash
+https://github.com/ciccoin/cic_hash
 
 ## Step 1: Download hash list
 

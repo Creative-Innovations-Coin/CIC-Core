@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -77,12 +77,12 @@ static int AppInitRPC(int argc, char* argv[])
     //
     ParseParameters(argc, argv);
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("Reef Core RPC client version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Cic Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  reef-cli [options] <command> [params]  " + _("Send command to Reef Core") + "\n" +
-                  "  reef-cli [options] help                " + _("List commands") + "\n" +
-                  "  reef-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  cic-cli [options] <command> [params]  " + _("Send command to Cic Core") + "\n" +
+                  "  cic-cli [options] help                " + _("List commands") + "\n" +
+                  "  cic-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }
@@ -173,13 +173,13 @@ UniValue CallRPC(const string& strMethod, const UniValue& params)
     if (req == NULL)
         throw runtime_error("create http request failed");
 
-    // Get creeftials
+    // Get ccictials
     std::string strRPCUserColonPass;
     if (mapArgs["-rpcpassword"] == "") {
         // Try fall back to cookie-based authentication if no password is provided
         if (!GetAuthCookie(&strRPCUserColonPass)) {
             throw runtime_error(strprintf(
-                _("Could not locate RPC creeftials. No authentication cookie could be found, and no rpcpassword is set in the configuration file (%s)"),
+                _("Could not locate RPC ccictials. No authentication cookie could be found, and no rpcpassword is set in the configuration file (%s)"),
                     GetConfigFile().string().c_str()));
 
         }

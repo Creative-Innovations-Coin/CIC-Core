@@ -7,7 +7,7 @@
 #include "uint256.h"
 #include "util.h"
 
-#include "test/test_reef.h"
+#include "test/test_cic.h"
 
 #include <boost/test/unit_test.hpp>
 

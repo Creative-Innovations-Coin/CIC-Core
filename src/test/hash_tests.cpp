@@ -4,7 +4,7 @@
 
 #include "hash.h"
 #include "utilstrencodings.h"
-#include "test/test_reef.h"
+#include "test/test_cic.h"
 
 #include <vector>
 

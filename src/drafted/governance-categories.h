@@ -4,22 +4,22 @@
 
 	* means the category has an associated class
 	
-	CReefNetwork: REEF NETWORK (ROOT)
+	CCicNetwork: CIC NETWORK (ROOT)
 	has:
 		vector<CNetworkVariable> vecNetworkVariables;
-		vector<CReefProject> vecProjects;
+		vector<CCicProject> vecProjects;
 		vector<CGovernanceObject> vecProposals;
 		vector<CBudgetContract> vecContracts;
 		vector<CBudgetUsers> vecUsers;
 
-	CReefProject:
+	CCicProject:
 	has:
 		name
 		employees
 
 */
 
-	// REEF NETWORK (ROOT)
+	// CIC NETWORK (ROOT)
 	// 	-> NETWORK VARIABLE
 	// 		-> switch, setting
 	// 	-> CATEGORIES
@@ -49,7 +49,7 @@
 	// 			-> USER1 (only users are allowed here in this scope)
 	// 			-> USER2
 	// 		-> GROUP2 (EVO)
-	// 			-> VALUEOVERRIDE (STORE=REEFDRIVE)
+	// 			-> VALUEOVERRIDE (STORE=CICDRIVE)
 	// 			-> USER1
 
 	// 	-> COMPANIES

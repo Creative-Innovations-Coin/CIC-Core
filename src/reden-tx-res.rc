@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Reef"
-            VALUE "FileDescription",    "reef-tx (CLI Reef transaction editor utility)"
+            VALUE "CompanyName",        "Cic"
+            VALUE "FileDescription",    "cic-tx (CLI Cic transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "reef-tx"
+            VALUE "InternalName",       "cic-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "reef-tx.exe"
-            VALUE "ProductName",        "reef-tx"
+            VALUE "OriginalFilename",   "cic-tx.exe"
+            VALUE "ProductName",        "cic-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

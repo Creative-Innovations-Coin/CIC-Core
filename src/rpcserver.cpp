@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2017-2018 The Proton Core developers
-// Copyright (c) 2018 The Reef Core developers
+// Copyright (c) 2018 The Cic Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -245,11 +245,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Reef Core server.");
+            "\nStop Cic Core server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "Reef Core server stopping";
+    return "Cic Core server stopping";
 }
 
 /**
@@ -344,19 +344,19 @@ static const CRPCCommand vRPCCommands[] =
     { "hidden",             "resendwallettransactions", &resendwallettransactions, true},
 #endif
 
-    /* Reef features */
-    { "reef",               "masternode",             &masternode,             true  },
-    { "reef",               "masternodelist",         &masternodelist,         true  },
-    { "reef",               "masternodebroadcast",    &masternodebroadcast,    true  },
-    { "reef",               "gobject",                &gobject,                true  },
-    { "reef",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
-    { "reef",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
-    { "reef",               "voteraw",                &voteraw,                true  },
-    { "reef",               "mnsync",                 &mnsync,                 true  },
-    { "reef",               "spork",                  &spork,                  true  },
-    { "reef",               "getpoolinfo",            &getpoolinfo,            true  },
+    /* Cic features */
+    { "cic",               "masternode",             &masternode,             true  },
+    { "cic",               "masternodelist",         &masternodelist,         true  },
+    { "cic",               "masternodebroadcast",    &masternodebroadcast,    true  },
+    { "cic",               "gobject",                &gobject,                true  },
+    { "cic",               "getgovernanceinfo",      &getgovernanceinfo,      true  },
+    { "cic",               "getsuperblockbudget",    &getsuperblockbudget,    true  },
+    { "cic",               "voteraw",                &voteraw,                true  },
+    { "cic",               "mnsync",                 &mnsync,                 true  },
+    { "cic",               "spork",                  &spork,                  true  },
+    { "cic",               "getpoolinfo",            &getpoolinfo,            true  },
 #ifdef ENABLE_WALLET
-    { "reef",               "privatesend",            &privatesend,            false },
+    { "cic",               "privatesend",            &privatesend,            false },
 
     /* Wallet */
     { "wallet",             "keepass",                &keepass,                true },
@@ -579,7 +579,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
-    return "> reef-cli " + methodname + " " + args + "\n";
+    return "> cic-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(const std::string& methodname, const std::string& args)

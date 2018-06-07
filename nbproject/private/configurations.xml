@@ -78,7 +78,7 @@
         <df name="release-notes">
           <df name="bitcoin">
           </df>
-          <df name="reef">
+          <df name="cic">
           </df>
         </df>
       </df>
@@ -90,7 +90,7 @@
           </df>
         </df>
       </df>
-      <df name="reef-docs">
+      <df name="cic-docs">
       </df>
       <df name="share">
         <df name="certs">
@@ -107,8 +107,8 @@
           <in>Examples.cpp</in>
           <in>bench.cpp</in>
           <in>bench.h</in>
-          <in>bench_reef.cpp</in>
-          <in>bench_reef.cpp</in>
+          <in>bench_cic.cpp</in>
+          <in>bench_cic.cpp</in>
         </df>
         <df name="compat">
           <in>byteswap.h</in>
@@ -121,7 +121,7 @@
           <in>strnlen.cpp</in>
         </df>
         <df name="config">
-          <in>reef-config.h</in>
+          <in>cic-config.h</in>
         </df>
         <df name="consensus">
           <in>consensus.h</in>
@@ -490,10 +490,10 @@
           <in>receiverequestdialog.h</in>
           <in>recentrequeststablemodel.cpp</in>
           <in>recentrequeststablemodel.h</in>
-          <in>reef.cpp</in>
-          <in>reefstrings.cpp</in>
-          <in>reef.cpp</in>
-          <in>reefstrings.cpp</in>
+          <in>cic.cpp</in>
+          <in>cicstrings.cpp</in>
+          <in>cic.cpp</in>
+          <in>cicstrings.cpp</in>
           <in>rpcconsole.cpp</in>
           <in>rpcconsole.h</in>
           <in>sendcoinsdialog.cpp</in>
@@ -707,9 +707,9 @@
           <in>sigopcount_tests.cpp</in>
           <in>skiplist_tests.cpp</in>
           <in>streams_tests.cpp</in>
-          <in>test_reef.cpp</in>
-          <in>test_reef.h</in>
-          <in>test_reef.cpp</in>
+          <in>test_cic.cpp</in>
+          <in>test_cic.h</in>
+          <in>test_cic.cpp</in>
           <in>timedata_tests.cpp</in>
           <in>transaction_tests.cpp</in>
           <in>txvalidationcache_tests.cpp</in>
@@ -879,12 +879,12 @@
         <in>pubkey.h</in>
         <in>random.cpp</in>
         <in>random.h</in>
-        <in>reef-cli.cpp</in>
-        <in>reef-tx.cpp</in>
-        <in>reefd.cpp</in>
-        <in>reef-cli.cpp</in>
-        <in>reef-tx.cpp</in>
-        <in>reefd.cpp</in>
+        <in>cic-cli.cpp</in>
+        <in>cic-tx.cpp</in>
+        <in>cicd.cpp</in>
+        <in>cic-cli.cpp</in>
+        <in>cic-tx.cpp</in>
+        <in>cicd.cpp</in>
         <in>rest.cpp</in>
         <in>reverselock.h</in>
         <in>rpcblockchain.cpp</in>
@@ -1016,7 +1016,7 @@
         <df name="release-notes">
           <df name="bitcoin">
           </df>
-          <df name="reef">
+          <df name="cic">
           </df>
         </df>
       </df>
@@ -1028,7 +1028,7 @@
           </df>
         </df>
       </df>
-      <df name="reef-docs">
+      <df name="cic-docs">
       </df>
       <df name="share">
         <df name="certs">

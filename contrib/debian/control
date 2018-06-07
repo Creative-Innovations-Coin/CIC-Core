@@ -1,8 +1,8 @@
-Source: reef
+Source: cic
 Section: utils
 Priority: optional
-Maintainer: Holger Schinzel <holger@reefcoin.info>
-Uploaders: Holger Schinzel <holger@reefcoin.info>
+Maintainer: Holger Schinzel <holger@ciccoin.info>
+Uploaders: Holger Schinzel <holger@ciccoin.info>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -24,45 +24,45 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://reefcoin.io/
-Vcs-Git: git://github.com/reefcoin/reefcoin.git
-Vcs-Browser: https://github.com/reefcoin/reefcoin
+Homepage: https://ciccoin.io/
+Vcs-Git: git://github.com/ciccoin/ciccoin.git
+Vcs-Browser: https://github.com/ciccoin/ciccoin
 
-Package: reefd
+Package: cicd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Reef is an experimental new digital currency that enables anonymous, instant
- payments to anyone, anywhere in the world. Reef uses peer-to-peer
+ Cic is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Cic uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Reef Core
+ and issuing money are carried out collectively by the network. Cic Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, reefd, and the CLI tool
- reef-cli to interact with the daemon.
+ This package provides the daemon, cicd, and the CLI tool
+ cic-cli to interact with the daemon.
 
-Package: reef-qt
+Package: cic-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Reef is an experimental new digital currency that enables anonymous, instant
- payments to anyone, anywhere in the world. Reef uses peer-to-peer
+ Cic is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Cic uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Reef Core
+ and issuing money are carried out collectively by the network. Cic Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Reef-Qt, a GUI for Reef based on Qt.
+ This package provides Cic-Qt, a GUI for Cic based on Qt.
 
-Package: reef-tx
+Package: cic-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Reef is an experimental new digital currency that enables anonymous, instant
- payments to anyone, anywhere in the world. Reef uses peer-to-peer
+ Cic is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Cic uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Reef Core
+ and issuing money are carried out collectively by the network. Cic Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides reef-tx, a command-line transaction creation
- tool which can be used without a reef daemon.  Some means of
+ This package provides cic-tx, a command-line transaction creation
+ tool which can be used without a cic daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

@@ -1,9 +1,9 @@
-Reef Core 1.0.0
+Cic Core 1.0.0
 =====================
 
 Intro
 -----
-Reef is a free open source peer-to-peer electronic cash system that is
+Cic is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -11,13 +11,13 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run reef-qt.exe.
+Unpack the files into a directory and run cic-qt.exe.
 
-Reef Core is the original Reef client and it builds the backbone of the network.
-However, it downloads and stores the entire history of Reef transactions;
+Cic Core is the original Cic client and it builds the backbone of the network.
+However, it downloads and stores the entire history of Cic transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.
 
-See the reef wiki at:
-  https://reefcoin.atlassian.net/wiki/
+See the cic wiki at:
+  https://ciccoin.atlassian.net/wiki/
 for more help and information.

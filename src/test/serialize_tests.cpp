@@ -5,7 +5,7 @@
 #include "serialize.h"
 #include "streams.h"
 #include "hash.h"
-#include "test/test_reef.h"
+#include "test/test_cic.h"
 
 #include <stdint.h>
 

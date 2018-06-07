@@ -1,4 +1,4 @@
-Building Reef Core
+Building Cic Core
 
 Use the autogen script to prepare the build environment.
 
@@ -7,10 +7,10 @@ Use the autogen script to prepare the build environment.
     make
 
 Precompiled binaries are available at github, see
-https://github.com/reefcoin/reefcoin/releases
+https://github.com/ciccoin/ciccoin/releases
 
 Always verify the signatures and checksums.
 
-See doc/build-*.md for instructions on building reefd,
+See doc/build-*.md for instructions on building cicd,
 the intended-for-services, no-graphical-interface, reference
-implementation of Reef.
+implementation of Cic.

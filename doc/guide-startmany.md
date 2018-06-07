@@ -4,7 +4,7 @@
 There are many ways to setup a wallet to support start-many. This guide will walk through two of them.
 
 1. [Importing an existing wallet (recommended if you are consolidating wallets).](#option1)
-2. [Sending 1000 REEF to new wallet addresses.](#option2)
+2. [Sending 1000 CIC to new wallet addresses.](#option2)
 
 ## <a name="option1"></a>Option 1. Importing an existing wallet
 
@@ -56,9 +56,9 @@ Create a new wallet address for each Masternode.
 
 Close your QT Wallet.
 
-### Send 1000 REEF to New Addresses
+### Send 1000 CIC to New Addresses
 
-Just like setting up a standard MN. Send exactly 1000 REEF to each new address created above.
+Just like setting up a standard MN. Send exactly 1000 CIC to each new address created above.
 
 ### Create New Masternode Private Keys
 
@@ -78,11 +78,11 @@ Remember... this is local. Make sure your QT is not running.
 
 Create the `masternode.conf` file in the same directory as your `wallet.dat`.
 
-Copy the masternode private key and correspondig collateral output transaction that holds the 1000 REEF.
+Copy the masternode private key and correspondig collateral output transaction that holds the 1000 CIC.
 
 The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2). 
 
-*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 REEF on the remote server and defeats the purpose of a hot/cold setup.*
+*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 CIC on the remote server and defeats the purpose of a hot/cold setup.*
 
 ### Get the collateral output
 
@@ -95,7 +95,7 @@ Issue the following:
 Make note of the hash (which is your collateral_output) and index.
 
 ### Enter your Masternode details into your masternode.conf file
-[From the reef github repo](https://github.com/reefcoin/reefcoin/blob/master/doc/masternode_conf.md)
+[From the cic github repo](https://github.com/ciccoin/ciccoin/blob/master/doc/masternode_conf.md)
 
 `masternode.conf` format is a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index.
 
@@ -110,20 +110,20 @@ mn01 127.0.0.1:9999 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84
 mn02 127.0.0.2:9999 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0
 ```
 
-## What about the reef.conf file?
+## What about the cic.conf file?
 
-If you are using a `masternode.conf` file you no longer need the `reef.conf` file. The exception is if you need custom settings (_thanks oblox_). In that case you **must** remove `masternode=1` from local `reef.conf` file. This option should be used only to start local Hot masternode now.
+If you are using a `masternode.conf` file you no longer need the `cic.conf` file. The exception is if you need custom settings (_thanks oblox_). In that case you **must** remove `masternode=1` from local `cic.conf` file. This option should be used only to start local Hot masternode now.
 
-## Update reef.conf on server
+## Update cic.conf on server
 
-If you generated a new masternode private key, you will need to update the remote `reef.conf` files.
+If you generated a new masternode private key, you will need to update the remote `cic.conf` files.
 
 Shut down the daemon and then edit the file.
 
-```nano .reefcore/reef.conf```
+```nano .ciccore/cic.conf```
 
 ### Edit the masternodeprivkey
-If you generated a new masternode private key, you will need to update the `masternodeprivkey` value in your remote `reef.conf` file.
+If you generated a new masternode private key, you will need to update the `masternodeprivkey` value in your remote `cic.conf` file.
 
 ## Start your Masternodes
 
@@ -133,9 +133,9 @@ If your remote server is not running, start your remote daemon as you normally w
 
 You can confirm that remote server is on the correct block by issuing
 
-```reef-cli getinfo```
+```cic-cli getinfo```
 
-and comparing with the official explorer at https://explorer.reefcoin.info/chain/Reef
+and comparing with the official explorer at https://explorer.ciccoin.info/chain/Cic
 
 ### Local
 
@@ -162,11 +162,11 @@ Example ```masternode start-alias mn01```
 Issue command `masternode status`
 It should return you something like that:
 ```
-reef-cli masternode status
+cic-cli masternode status
 {
     "vin" : "CTxIn(COutPoint(<collateral_output>, <collateral_output_index>), scriptSig=)",
     "service" : "<ipaddress>:<port>",
-    "pubkey" : "<1000 REEF address>",
+    "pubkey" : "<1000 CIC address>",
     "status" : "Masternode successfully started"
 }
 ```
@@ -174,6 +174,6 @@ Command output should have "_Masternode successfully started_" in its `status` f
 
 ### Local
 
-Search your Masternodes on https://reefninja.pl/masternodes.html
+Search your Masternodes on https://cicninja.pl/masternodes.html
 
 _Hint: Bookmark it, you definitely will be using this site a lot._

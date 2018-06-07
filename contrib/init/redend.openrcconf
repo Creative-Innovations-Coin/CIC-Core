@@ -1,25 +1,25 @@
-# /etc/conf.d/reefd: config file for /etc/init.d/reefd
+# /etc/conf.d/cicd: config file for /etc/init.d/cicd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/reefcore/reef.conf"
+#BITCOIND_CONFIGFILE="/etc/ciccore/cic.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/reefd"
+#BITCOIND_PIDDIR="/var/run/cicd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/reefd.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cicd.pid"
 
-# Where to write reefd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/reefd"
+# Where to write cicd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cicd"
 
-# User and group to own reefd process
-#BITCOIND_USER="reefcore"
-#BITCOIND_GROUP="reefcore"
+# User and group to own cicd process
+#BITCOIND_USER="ciccore"
+#BITCOIND_GROUP="ciccore"
 
-# Path to reefd executable
-#BITCOIND_BIN="/usr/bin/reefd"
+# Path to cicd executable
+#BITCOIND_BIN="/usr/bin/cicd"
 
-# Nice value to run reefd under
+# Nice value to run cicd under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

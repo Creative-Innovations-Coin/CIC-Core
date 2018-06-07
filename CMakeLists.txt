@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(Reef)
+project(Cic)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -38,7 +38,7 @@ include_directories(src/univalue/lib)
 include_directories(src/wallet)
 include_directories(src/zmq)
 
-add_executable(Reef
+add_executable(Cic
         .settings/org.eclipse.core.resources.prefs
         build-aux/m4/ax_boost_base.m4
         build-aux/m4/ax_boost_chrono.m4
@@ -70,11 +70,11 @@ add_executable(Reef
         build-aux/ltmain.sh
         build-aux/missing
         build-aux/test-driver
-        contrib/debian/examples/reef.conf
-        contrib/debian/manpages/reef-cli.1
-        contrib/debian/manpages/reef-qt.1
-        contrib/debian/manpages/reef.conf.5
-        contrib/debian/manpages/reefd.1
+        contrib/debian/examples/cic.conf
+        contrib/debian/manpages/cic-cli.1
+        contrib/debian/manpages/cic-qt.1
+        contrib/debian/manpages/cic.conf.5
+        contrib/debian/manpages/cicd.1
         contrib/debian/patches/README
         contrib/debian/patches/series
         contrib/debian/source/format
@@ -85,16 +85,16 @@ add_executable(Reef
         contrib/debian/copyright
         contrib/debian/gbp.conf
         contrib/debian/README.md
-        contrib/debian/reef-qt.desktop.desktop
-        contrib/debian/reef-qt.install
-        contrib/debian/reef-qt.lintian-overrides
-        contrib/debian/reef-qt.protocol
-        contrib/debian/reef-tx.install
-        contrib/debian/reefd.bash-completion
-        contrib/debian/reefd.examples
-        contrib/debian/reefd.install
-        contrib/debian/reefd.lintian-overrides
-        contrib/debian/reefd.manpages
+        contrib/debian/cic-qt.desktop.desktop
+        contrib/debian/cic-qt.install
+        contrib/debian/cic-qt.lintian-overrides
+        contrib/debian/cic-qt.protocol
+        contrib/debian/cic-tx.install
+        contrib/debian/cicd.bash-completion
+        contrib/debian/cicd.examples
+        contrib/debian/cicd.install
+        contrib/debian/cicd.lintian-overrides
+        contrib/debian/cicd.manpages
         contrib/debian/rules
         contrib/debian/watch
         contrib/devtools/clang-format.py
@@ -133,13 +133,13 @@ add_executable(Reef
         contrib/gitian-downloader/sipa-key.pgp
         contrib/gitian-downloader/tcatm-key.pgp
         contrib/gitian-downloader/wtogami-key.pgp
-        contrib/init/org.reef.reefd.plist
+        contrib/init/org.cic.cicd.plist
         contrib/init/README.md
-        contrib/init/reefd.conf
-        contrib/init/reefd.init
-        contrib/init/reefd.openrc
-        contrib/init/reefd.openrcconf
-        contrib/init/reefd.service
+        contrib/init/cicd.conf
+        contrib/init/cicd.init
+        contrib/init/cicd.openrc
+        contrib/init/cicd.openrcconf
+        contrib/init/cicd.service
         contrib/linearize/example-linearize-testnet.cfg
         contrib/linearize/example-linearize.cfg
         contrib/linearize/linearize-data.py
@@ -180,8 +180,8 @@ add_executable(Reef
         contrib/zmq/zmq_sub.py
         contrib/qt_translations.py
         contrib/README.md
-        contrib/reef-qt.pro
-        contrib/reefd.bash-completion
+        contrib/cic-qt.pro
+        contrib/cicd.bash-completion
         contrib/tidy_datadir.sh
         depends/builders/darwin.mk
         depends/builders/default.mk
@@ -332,7 +332,7 @@ add_executable(Reef
         doc/release-notes/bitcoin/release-notes-0.9.3.md
         doc/release-notes/bitcoin/release-notes-0.9.4.md
         doc/release-notes/bitcoin/release-notes-0.9.5.md
-        doc/release-notes/reef/release-notes-1.0.0.md
+        doc/release-notes/cic/release-notes-1.0.0.md
         doc/assets-attribution.md
         doc/bips.md
         doc/bitcoin_logo_doxygen.png
@@ -453,7 +453,7 @@ add_executable(Reef
         qa/rpc-tests/zapwallettxes.py
         qa/rpc-tests/zmq_test.py
         qa/README.md
-        reef-docs/protocol-documentation.md
+        cic-docs/protocol-documentation.md
         share/certs/BitcoinFoundation_Apple_Cert.pem
         share/certs/BitcoinFoundation_Comodo_Cert.pem
         share/certs/PrivateKeyNotes.md
@@ -480,7 +480,7 @@ add_executable(Reef
         src/bench/.gitignore
         src/bench/bench.cpp
         src/bench/bench.h
-        src/bench/bench_reef.cpp
+        src/bench/bench_cic.cpp
         src/bench/Examples.cpp
         src/compat/byteswap.h
         src/compat/endian.h
@@ -491,7 +491,7 @@ add_executable(Reef
         src/compat/sanity.h
         src/compat/strnlen.cpp
         src/config/.empty
-        src/config/reef-config.h
+        src/config/cic-config.h
         src/consensus/consensus.h
         src/consensus/merkle.cpp
         src/consensus/merkle.h
@@ -745,22 +745,22 @@ add_executable(Reef
         src/qt/forms/sendcoinsentry.ui
         src/qt/forms/signverifymessagedialog.ui
         src/qt/forms/transactiondescdialog.ui
-        src/qt/locale/reef_bg.ts
-        src/qt/locale/reef_de.ts
-        src/qt/locale/reef_en.ts
-        src/qt/locale/reef_es.ts
-        src/qt/locale/reef_fi.ts
-        src/qt/locale/reef_fr.ts
-        src/qt/locale/reef_it.ts
-        src/qt/locale/reef_ja.ts
-        src/qt/locale/reef_pl.ts
-        src/qt/locale/reef_pt.ts
-        src/qt/locale/reef_ru.ts
-        src/qt/locale/reef_sk.ts
-        src/qt/locale/reef_sv.ts
-        src/qt/locale/reef_vi.ts
-        src/qt/locale/reef_zh_CN.ts
-        src/qt/locale/reef_zh_TW.ts
+        src/qt/locale/cic_bg.ts
+        src/qt/locale/cic_de.ts
+        src/qt/locale/cic_en.ts
+        src/qt/locale/cic_es.ts
+        src/qt/locale/cic_fi.ts
+        src/qt/locale/cic_fr.ts
+        src/qt/locale/cic_it.ts
+        src/qt/locale/cic_ja.ts
+        src/qt/locale/cic_pl.ts
+        src/qt/locale/cic_pt.ts
+        src/qt/locale/cic_ru.ts
+        src/qt/locale/cic_sk.ts
+        src/qt/locale/cic_sv.ts
+        src/qt/locale/cic_vi.ts
+        src/qt/locale/cic_zh_CN.ts
+        src/qt/locale/cic_zh_TW.ts
         src/qt/res/css/crownium.css
         src/qt/res/css/drkblue.css
         src/qt/res/css/light.css
@@ -977,7 +977,7 @@ add_executable(Reef
         src/qt/res/images/crownium/drkblue_rightArrow_small.png
         src/qt/res/images/crownium/drkblue_upArrow_small.png
         src/qt/res/images/crownium/drkblue_walletFrame_bg.png
-        src/qt/res/images/crownium/reef_logo_horizontal.png
+        src/qt/res/images/crownium/cic_logo_horizontal.png
         src/qt/res/images/crownium/splash.png
         src/qt/res/images/crownium/splash_testnet.png
         src/qt/res/images/crownium/unchecked.png
@@ -990,7 +990,7 @@ add_executable(Reef
         src/qt/res/images/drkblue/drkblue_rightArrow_small.png
         src/qt/res/images/drkblue/drkblue_upArrow_small.png
         src/qt/res/images/drkblue/drkblue_walletFrame_bg.png
-        src/qt/res/images/drkblue/reef_logo_horizontal.png
+        src/qt/res/images/drkblue/cic_logo_horizontal.png
         src/qt/res/images/drkblue/splash.png
         src/qt/res/images/drkblue/splash_testnet.png
         src/qt/res/images/drkblue/unchecked.png
@@ -1003,7 +1003,7 @@ add_executable(Reef
         src/qt/res/images/light/drkblue_rightArrow_small.png
         src/qt/res/images/light/drkblue_upArrow_small.png
         src/qt/res/images/light/drkblue_walletFrame_bg.png
-        src/qt/res/images/light/reef_logo_horizontal.png
+        src/qt/res/images/light/cic_logo_horizontal.png
         src/qt/res/images/light/splash.png
         src/qt/res/images/light/splash_testnet.png
         src/qt/res/images/light/unchecked.png
@@ -1016,7 +1016,7 @@ add_executable(Reef
         src/qt/res/images/trad/drkblue_rightArrow_small.png
         src/qt/res/images/trad/drkblue_upArrow_small.png
         src/qt/res/images/trad/drkblue_walletFrame_bg.png
-        src/qt/res/images/trad/reef_logo_horizontal.png
+        src/qt/res/images/trad/cic_logo_horizontal.png
         src/qt/res/images/trad/splash.png
         src/qt/res/images/trad/splash_testnet.png
         src/qt/res/images/trad/unchecked.png
@@ -1075,7 +1075,7 @@ add_executable(Reef
         src/qt/res/src/tx_in.svg
         src/qt/res/src/tx_inout.svg
         src/qt/res/src/verify.svg
-        src/qt/res/reef-qt-res.rc
+        src/qt/res/cic-qt-res.rc
         src/qt/test/compattests.cpp
         src/qt/test/compattests.h
         src/qt/test/Makefile
@@ -1155,10 +1155,10 @@ add_executable(Reef
         src/qt/receiverequestdialog.h
         src/qt/recentrequeststablemodel.cpp
         src/qt/recentrequeststablemodel.h
-        src/qt/reef.cpp
-        src/qt/reef.qrc
-        src/qt/reef_locale.qrc
-        src/qt/reefstrings.cpp
+        src/qt/cic.cpp
+        src/qt/cic.qrc
+        src/qt/cic_locale.qrc
+        src/qt/cicstrings.cpp
         src/qt/rpcconsole.cpp
         src/qt/rpcconsole.h
         src/qt/sendcoinsdialog.cpp
@@ -1380,8 +1380,8 @@ add_executable(Reef
         src/test/sigopcount_tests.cpp
         src/test/skiplist_tests.cpp
         src/test/streams_tests.cpp
-        src/test/test_reef.cpp
-        src/test/test_reef.h
+        src/test/test_cic.cpp
+        src/test/test_cic.h
         src/test/timedata_tests.cpp
         src/test/transaction_tests.cpp
         src/test/txvalidationcache_tests.cpp
@@ -1595,12 +1595,12 @@ add_executable(Reef
         src/pubkey.h
         src/random.cpp
         src/random.h
-        src/reef-cli-res.rc
-        src/reef-cli.cpp
-        src/reef-tx-res.rc
-        src/reef-tx.cpp
-        src/reefd-res.rc
-        src/reefd.cpp
+        src/cic-cli-res.rc
+        src/cic-cli.cpp
+        src/cic-tx-res.rc
+        src/cic-tx.cpp
+        src/cicd-res.rc
+        src/cicd.cpp
         src/rest.cpp
         src/reverselock.h
         src/rpcblockchain.cpp
@@ -1671,6 +1671,6 @@ add_executable(Reef
         Makefile.am
         pkg.m4
         README.md
-        reef_logo_horizontal.png
+        cic_logo_horizontal.png
         splash.png
         splash_testnet.png)

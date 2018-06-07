@@ -1,9 +1,9 @@
-/* src/config/reef-config.h.  Generated from reef-config.h.in by configure.  */
-/* src/config/reef-config.h.in.  Generated from configure.ac by autoheader.  */
+/* src/config/cic-config.h.  Generated from cic-config.h.in by configure.  */
+/* src/config/cic-config.h.in.  Generated from configure.ac by autoheader.  */
 
-#ifndef REEF_CONFIG_H
+#ifndef CIC_CONFIG_H
 
-#define REEF_CONFIG_H
+#define CIC_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -28,10 +28,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Reef Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Cic Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Reef Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Cic Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2018
@@ -351,16 +351,16 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/NicholasAdmin/Reef/issues"
+#define PACKAGE_BUGREPORT "https://github.com/NicholasAdmin/Cic/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Reef Core"
+#define PACKAGE_NAME "Cic Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Reef Core 1.0.2"
+#define PACKAGE_STRING "Cic Core 1.0.2"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "reefcore"
+#define PACKAGE_TARNAME "ciccore"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""
@@ -432,4 +432,4 @@
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
-#endif //REEF_CONFIG_H
+#endif //CIC_CONFIG_H

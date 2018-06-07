@@ -17,7 +17,7 @@
 #include "util.h"
 #include "utilstrencodings.h"
 
-#include "test/test_reef.h"
+#include "test/test_cic.h"
 
 #include <boost/test/unit_test.hpp>
 

@@ -7,8 +7,8 @@ GovernanceObjectType GovernanceStringToType(std::string strType) {
     if(strType == "AllTypes") type = AllTypes;
     if(strType == "Error") type = Error;
     if(strType == "ValueOverride") type = ValueOverride;
-    if(strType == "ReefNetwork") type = ReefNetwork;
-    if(strType == "ReefNetworkVariable") type = ReefNetworkVariable;
+    if(strType == "CicNetwork") type = CicNetwork;
+    if(strType == "CicNetworkVariable") type = CicNetworkVariable;
     if(strType == "Category") type = Category;
     if(strType == "Group") type = Group;
     if(strType == "User") type = User;
@@ -28,8 +28,8 @@ std::string GovernanceTypeToString(GovernanceObjectType type) {
     if(type == AllTypes) s = "AllTypes";
     if(type == Error) s = "Error";
     if(type == ValueOverride) s = "ValueOverride";
-    if(type == ReefNetwork) s = "ReefNetwork";
-    if(type == ReefNetworkVariable) s = "ReefNetworkVariable";
+    if(type == CicNetwork) s = "CicNetwork";
+    if(type == CicNetworkVariable) s = "CicNetworkVariable";
     if(type == Category) s = "Category";
     if(type == Group) s = "Group";
     if(type == User) s = "User";

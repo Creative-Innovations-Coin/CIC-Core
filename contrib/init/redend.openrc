@@ -2,26 +2,26 @@
 
 # backward compatibility for existing gentoo layout 
 #
-if [ -d "/var/lib/reefcore/.reefcore" ]; then
-	BITCOIND_DEFAULT_DATADIR="/var/lib/reefcore/.reefcore"
+if [ -d "/var/lib/ciccore/.ciccore" ]; then
+	BITCOIND_DEFAULT_DATADIR="/var/lib/ciccore/.ciccore"
 else
-	BITCOIND_DEFAULT_DATADIR="/var/lib/reefd"
+	BITCOIND_DEFAULT_DATADIR="/var/lib/cicd"
 fi
 
-BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/reefcore/reef.conf}
-BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/reefd}
-BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/reefd.pid}
+BITCOIND_CONFIGFILE=${BITCOIND_CONFIGFILE:-/etc/ciccore/cic.conf}
+BITCOIND_PIDDIR=${BITCOIND_PIDDIR:-/var/run/cicd}
+BITCOIND_PIDFILE=${BITCOIND_PIDFILE:-${BITCOIND_PIDDIR}/cicd.pid}
 BITCOIND_DATADIR=${BITCOIND_DATADIR:-${BITCOIND_DEFAULT_DATADIR}}
-BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-reefcore}}
-BITCOIND_GROUP=${BITCOIND_GROUP:-reefcore}
-BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/reefd}
+BITCOIND_USER=${BITCOIND_USER:-${BITCOIN_USER:-ciccore}}
+BITCOIND_GROUP=${BITCOIND_GROUP:-ciccore}
+BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/cicd}
 BITCOIND_NICE=${BITCOIND_NICE:-${NICELEVEL:-0}}
 BITCOIND_OPTS="${BITCOIND_OPTS:-${BITCOIN_OPTS}}"
 
-name="Reef Core Daemon"
-description="Reef cryptocurrency P2P network daemon"
+name="Cic Core Daemon"
+description="Cic cryptocurrency P2P network daemon"
 
-command="/usr/bin/reefd"
+command="/usr/bin/cicd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \
 		-conf=\"${BITCOIND_CONFIGFILE}\" \
 		-datadir=\"${BITCOIND_DATADIR}\" \
@@ -71,7 +71,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${BITCOIND_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run reefd."
+		eerror "ERROR: You must set a secure rpcpassword to run cicd."
 		eerror "The setting must appear in ${BITCOIND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is also recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Reef Core Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Cic Core Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

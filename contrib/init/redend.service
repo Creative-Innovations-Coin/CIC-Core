@@ -1,15 +1,15 @@
 [Unit]
-Description=Reef's distributed currency daemon
+Description=Cic's distributed currency daemon
 After=network.target
 
 [Service]
-User=reefcore
-Group=reefcore
+User=ciccore
+Group=ciccore
 
 Type=forking
-PIDFile=/var/lib/reefd/reefd.pid
-ExecStart=/usr/bin/reefd -daemon -pid=/var/lib/reefd/reefd.pid \
--conf=/etc/reefcore/reef.conf -datadir=/var/lib/reefd -disablewallet
+PIDFile=/var/lib/cicd/cicd.pid
+ExecStart=/usr/bin/cicd -daemon -pid=/var/lib/cicd/cicd.pid \
+-conf=/etc/ciccore/cic.conf -datadir=/var/lib/cicd -disablewallet
 
 Restart=always
 PrivateTmp=true
