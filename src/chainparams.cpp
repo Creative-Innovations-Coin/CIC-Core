@@ -119,9 +119,9 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1528474350, 0, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1528474350, 1657120, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-
+/*
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -161,9 +161,9 @@ public:
 
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-
-      //  assert(consensus.hashGenesisBlock == uint256S("0000070a19c583431e36c438008d0528c69a46d2cbe0d5748f02c4a631a1f52f"));
-      //  assert(genesis.hashMerkleRoot == uint256S("853998cdea8cc791f43ef87f4a4e5da38e49943f967beb122d19aa642693341c"));
+*/
+        assert(consensus.hashGenesisBlock == uint256S("00000aa6e940d8cb1b18f6183eae7d0f5369de24c1aa6fd2a19ecf74d53b0c8f"));
+        assert(genesis.hashMerkleRoot == uint256S("bf90b623d1b441fd3e06c58748683eb279d2ec1626e133c4db74f861f2ed9b59"));
 
         vSeeds.push_back(CDNSSeedData("alpha.creativecoin.design", "alpha.creativecoin.design"));
         vSeeds.push_back(CDNSSeedData("beta.creativecoin.design", "beta.creativecoin.design"));
@@ -195,7 +195,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x")),
+            ( 0, uint256S("00000aa6e940d8cb1b18f6183eae7d0f5369de24c1aa6fd2a19ecf74d53b0c8f")),
             1528474350, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
