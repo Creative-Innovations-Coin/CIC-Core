@@ -1960,7 +1960,7 @@ CAmount GetMainBlockReward(int nPrevHeight) {
         return 12000000 * COIN; //premine
     }
     CAmount blockReward;
-    if (nPrevHeight <= 720){
+    if (nPrevHeight <= 540){
         blockReward = 1;
     } else if (nPrevHeight <= 4000){
         blockReward = 1000;

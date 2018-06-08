@@ -46,7 +46,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 7 June 2018";
+    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 8 June 2018";
     const CScript genesisOutputScript = CScript() << ParseHex("04dfab48e49169da8dd843d67a836e088a2ab91b9139d8a5449b5f703270da001db34f56774c2267dc2fa7d22def8166a1fe8a2b331dad89479f52853aece7bfd2") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -115,13 +115,13 @@ public:
         pchMessageStart[2] = 0x9c;
         pchMessageStart[3] = 0xd5;
         vAlertPubKey = ParseHex("042f1c1963c1efff3b846209dd9433d2c67347c31e2163198e896caeaa7fa887449bc59fc267623b16e446f494d06c3bcf65a46babdb6e87560b60fcc7199971c8");
-        nDefaultPort = 9889;
+        nDefaultPort = 9857;
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1528388100, 217307, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1528474350, 0, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-/*
+
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -161,9 +161,9 @@ public:
 
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-*/
-        assert(consensus.hashGenesisBlock == uint256S("0000070a19c583431e36c438008d0528c69a46d2cbe0d5748f02c4a631a1f52f"));
-        assert(genesis.hashMerkleRoot == uint256S("853998cdea8cc791f43ef87f4a4e5da38e49943f967beb122d19aa642693341c"));
+
+      //  assert(consensus.hashGenesisBlock == uint256S("0000070a19c583431e36c438008d0528c69a46d2cbe0d5748f02c4a631a1f52f"));
+      //  assert(genesis.hashMerkleRoot == uint256S("853998cdea8cc791f43ef87f4a4e5da38e49943f967beb122d19aa642693341c"));
 
         vSeeds.push_back(CDNSSeedData("alpha.creativecoin.design", "alpha.creativecoin.design"));
         vSeeds.push_back(CDNSSeedData("beta.creativecoin.design", "beta.creativecoin.design"));
@@ -195,8 +195,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("853998cdea8cc791f43ef87f4a4e5da38e49943f967beb122d19aa642693341c")),
-            1528388100, // * UNIX timestamp of last checkpoint block
+            ( 0, uint256S("0x")),
+            1528474350, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500	        // * estimated number of transactions per day after checkpoint
@@ -256,7 +256,7 @@ public:
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1513728000, 21635, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1528474351, 0, 0x1e0ffff0, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
      //   assert(consensus.hashGenesisBlock == uint256S("0x0000000f350d9039575f6446584f4ae4317bed76aae26ef1f2381ff73f7cd68d"));
@@ -295,7 +295,7 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             ( 0, uint256S("0x000005e8d240378921a0c3e84933ed2059ab1375304809a33884a86c6d8bf38c")),
-            1513728000, // * UNIX timestamp of last checkpoint block
+            1528474351, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500	        // * estimated number of transactions per day after checkpoint
