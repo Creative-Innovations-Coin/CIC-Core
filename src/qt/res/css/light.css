@@ -36,7 +36,7 @@ color:#333;
 }
 
 QMenu::item:selected {
-background-color:#f2f0f0;
+background-color:#c6bcb8;
 color:#333;
 }
 
@@ -103,10 +103,10 @@ background-color:#f2f2f2;
 /*******************************************************/
 
 QPushButton { /* Global Button Style */
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #4ca5dc, stop: .1 #2c85cc, stop: .95 #2c85cc, stop: 1 #1D80B5);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #4ca5dc, stop: .1 #686f67, stop: .95 #686f67, stop: 1 #1D80B5);
 border:0;
 border-radius:3px;
-color:#ffffff;
+color:#c6bcb8;
 font-size:12px;
 font-weight:normal;
 height: 26px;
@@ -726,7 +726,7 @@ background-color:#00ff00;
 }
 
 QDialog#RPCConsole .QGroupBox #line_2 { /* Network Out Line */
-background:#ff0000;
+background:#000000;
 }
 
 /* HELP MENU */
