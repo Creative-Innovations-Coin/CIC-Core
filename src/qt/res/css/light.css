@@ -24,11 +24,11 @@ background-color:#fff;
 }
 
 QMenuBar::item:selected {
-background-color:#f8f6f6;
+background-color:#c6bcb8;
 }
 
 QMenu {
-background-color:#f8f6f6;
+background-color:#c6bcb8;
 }
 
 QMenu::item {
@@ -58,7 +58,7 @@ color:#333;
 }
 
 QToolBar > QToolButton:checked {
-background-color:#1c75bc;
+background-color:#686f67;
 color:#fff;
 font-weight:bold;
 }
@@ -143,7 +143,7 @@ background:#f2f2f2;
 }
 
 QComboBox:editable {
-background: #1c75bc;
+background: #686f67;
 color:#616161;
 border:0px solid transparent;
 }
@@ -279,7 +279,7 @@ background-color:transparent;
 
 QHeaderView::section { /* Table Header Sections */
 qproperty-alignment:center;
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #1070B0, stop: 1 #1c75bc);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #1070B0, stop: 1 #686f67);
 color:#fff;
 min-height:25px;
 font-weight:bold;
@@ -700,7 +700,7 @@ min-width:180px;
 }
 
 QDialog#RPCConsole QWidget#tab_peers  QLabel#peerHeading { /* Peers Info Header */
-color:#1c75bc;
+color:#686f67;
 }
 
 QDialog#RPCConsole QPushButton#openDebugLogfileButton {
@@ -810,7 +810,7 @@ margin-left:16px;
 QWidget .QFrame#frame .QLabel#labelBalanceText { /* Available Balance Label */
 qproperty-alignment: 'AlignVCenter | AlignRight';
 min-width:160px;
-background-color:#1c75bc;
+background-color:#686f67;
 color:#ffffff;
 margin-right:5px;
 padding-right:5px;
@@ -822,7 +822,7 @@ min-height:35px;
 QWidget .QFrame#frame .QLabel#labelBalance { /* Available Balance */
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 font-size:16px;
-color:#1c75bc;
+color:#686f67;
 margin-left:0px;
     font-weight: bold;
 }
@@ -914,7 +914,7 @@ QWidget .QFrame#framePrivateSend .QLabel#labelPrivateSendHeader { /* PrivateSend
 qproperty-alignment: 'AlignVCenter | AlignCenter';
 max-width: 421px;
 min-width: 421px;
-background-color:#1c75bc;
+background-color:#686f67;
 color:#fff;
 margin-right: 5px;
 padding-right: 5px;
@@ -971,7 +971,7 @@ color:#818181;
 }
 
 QWidget .QFrame#framePrivateSend #privateSendFormLayoutWidget .QProgressBar#privateSendProgress::chunk {
-background-color: #1c75bc;
+background-color: #686f67;
 width:1px;
 }
 
@@ -1599,7 +1599,7 @@ QLabel#transactionSumLabel { /* Example of setObjectName for widgets without nam
 color:#333333;
 font-weight:bold;
 }
- 
+
 QLabel#transactionSum { /* Example of setObjectName for widgets without name */
 color:#333333;
 }
@@ -1613,5 +1613,3 @@ background-color:#F8F6F6;
 QDialog#TransactionDescDialog QTextEdit { /* Contents of Receive Coin Dialog */
 border:1px solid #d7d7d7;
 }
-
-
