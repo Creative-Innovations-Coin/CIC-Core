@@ -3001,9 +3001,9 @@ bool CWallet::CreateTransaction(const vector<CRecipient>& vecSend, CWalletTx& wt
                 if (!SelectCoins(nValueToSelect, setCoins, nValueIn, coinControl, nCoinType, fUseInstantSend))
                 {
                     if (nCoinType == ONLY_NOT5000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 500000 CIC.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 100000 CIC.");
                     } else if (nCoinType == ONLY_NONDENOMINATED_NOT5000IFMN) {
-                        strFailReason = _("Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 500000 CIC.");
+                        strFailReason = _("Unable to locate enough PrivateSend non-denominated funds for this transaction that are not equal 100000 CIC.");
                     } else if (nCoinType == ONLY_DENOMINATED) {
                         strFailReason = _("Unable to locate enough PrivateSend denominated funds for this transaction.");
                         strFailReason += " " + _("PrivateSend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
