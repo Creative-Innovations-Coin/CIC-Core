@@ -46,7 +46,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 8 June 2018";
+    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 10 June 2018";
     const CScript genesisOutputScript = CScript() << ParseHex("04dfab48e49169da8dd843d67a836e088a2ab91b9139d8a5449b5f703270da001db34f56774c2267dc2fa7d22def8166a1fe8a2b331dad89479f52853aece7bfd2") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -119,9 +119,9 @@ public:
         nMaxTipAge = 1.5 * 60 * 60; // ~36 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1528474350, 1657120, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1528664400, 0, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-/*
+
 	 //////////////
         //////////////
                 // calculate Genesis Block
@@ -150,7 +150,7 @@ public:
                         if (genesis.nNonce % 10000 == 0)
                         {
                             LogPrintf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-                            //std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
+                            std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
                         }
                     }
                     std::cout << "Mainnet ---\n";
@@ -161,13 +161,14 @@ public:
 
                 }
                 std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
-*/
-        assert(consensus.hashGenesisBlock == uint256S("00000aa6e940d8cb1b18f6183eae7d0f5369de24c1aa6fd2a19ecf74d53b0c8f"));
-        assert(genesis.hashMerkleRoot == uint256S("bf90b623d1b441fd3e06c58748683eb279d2ec1626e133c4db74f861f2ed9b59"));
+
+//        assert(consensus.hashGenesisBlock == uint256S("00000aa6e940d8cb1b18f6183eae7d0f5369de24c1aa6fd2a19ecf74d53b0c8f"));
+//        assert(genesis.hashMerkleRoot == uint256S("bf90b623d1b441fd3e06c58748683eb279d2ec1626e133c4db74f861f2ed9b59"));
 
         vSeeds.push_back(CDNSSeedData("alpha.creativecoin.design", "alpha.creativecoin.design"));
         vSeeds.push_back(CDNSSeedData("beta.creativecoin.design", "beta.creativecoin.design"));
         vSeeds.push_back(CDNSSeedData("gamma.creativecoin.design", "gamma.creativecoin.design"));
+        vSeeds.push_back(CDNSSeedData("delta.creativecoin.design", "delta.creativecoin.design"));
 
         // Cic addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,28);
@@ -195,8 +196,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("00000aa6e940d8cb1b18f6183eae7d0f5369de24c1aa6fd2a19ecf74d53b0c8f")),
-            1528474350, // * UNIX timestamp of last checkpoint block
+            ( 0, uint256S("")),
+            1528664400, // * UNIX timestamp of last checkpoint block
             0,          // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             500	        // * estimated number of transactions per day after checkpoint

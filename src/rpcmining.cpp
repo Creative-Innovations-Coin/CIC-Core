@@ -459,14 +459,14 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
     if (strMode != "template")
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
-    if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Cic Core is not connected!");
-
-    if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Cic Core is downloading blocks...");
-
-    if (!masternodeSync.IsSynced())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Cic Core is syncing with network...");
+//    if (vNodes.empty())
+//        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "Cic Core is not connected!");
+//
+//    if (IsInitialBlockDownload())
+//        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Cic Core is downloading blocks...");
+//
+//    if (!masternodeSync.IsSynced())
+//        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "Cic Core is syncing with network...");
 
     static unsigned int nTransactionsUpdatedLast;
 
