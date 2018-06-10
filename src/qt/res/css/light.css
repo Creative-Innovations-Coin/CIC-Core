@@ -279,7 +279,7 @@ background-color:transparent;
 
 QHeaderView::section { /* Table Header Sections */
 qproperty-alignment:center;
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #1070B0, stop: 1 #686f67);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #000000, stop: 1 #686f67);
 color:#fff;
 min-height:25px;
 font-weight:bold;
@@ -722,7 +722,7 @@ padding-right:10px;
 }
 
 QDialog#RPCConsole .QGroupBox #line { /* Network In Line */
-background-color:#00ff00;
+background-color:#000000;
 }
 
 QDialog#RPCConsole .QGroupBox #line_2 { /* Network Out Line */
