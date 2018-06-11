@@ -1772,7 +1772,7 @@ CAmount GetMainBlockReward(int nPrevHeight) {
     {
         return 50 * COIN;
     }
-    if (nPrevHeight == 15) {
+    if (nPrevHeight == 1) {
         return 12500000 * COIN; //premine
     }
     CAmount blockReward;
