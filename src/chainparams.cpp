@@ -46,7 +46,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 11 June 2018";
+    const char* pszTimestamp = "CIC residents are welcome to Blockchain since 12 June 2018";
     const CScript genesisOutputScript = CScript() << ParseHex("04dfab48e49169da8dd843d67a836e088a2ab91b9139d8a5449b5f703270da001db34f56774c2267dc2fa7d22def8166a1fe8a2b331dad89479f52853aece7bfd2") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -120,6 +120,7 @@ public:
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1528747327, 823027, 0x1e0ffff0, 1, 50 * COIN);
+
         consensus.hashGenesisBlock = genesis.GetHash();
 
         assert(consensus.hashGenesisBlock == uint256S("00000c0055bc44a93277a6f95a00bebce03feb76195752ffd68dcbab1fb9d6c5"));
