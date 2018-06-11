@@ -1778,10 +1778,10 @@ CAmount GetMainBlockReward(int nPrevHeight) {
     CAmount blockReward;
     if (nPrevHeight <= 540){
         blockReward = 1;
-    } else if (nPrevHeight <= 4000){
-        blockReward = 1;
+    } else if (nPrevHeight <= 2000){
+        blockReward = 1000;
     } else if (nPrevHeight <= 5000) {
-        blockReward = 500;
+        blockReward = 1000;
     } else if (nPrevHeight <= 12800) {
         blockReward = 1000;
     } else if (nPrevHeight <= 20600){
