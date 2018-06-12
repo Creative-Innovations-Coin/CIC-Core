@@ -91,7 +91,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
 
     /* Theme selector */
     ui->theme->addItem(QString("CIC-light"), QVariant("light"));
-//    ui->theme->addItem(QString("CIC-dark"), QVariant("drkblue"));
+    ui->theme->addItem(QString("CIC-dark"), QVariant("drkblue"));
 //    ui->theme->addItem(QString("CIC-Crownium"), QVariant("crownium"));
 //    ui->theme->addItem(QString("CIC-traditional"), QVariant("trad"));
 
