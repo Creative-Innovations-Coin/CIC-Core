@@ -120,7 +120,7 @@ public:
         nPruneAfterHeight = 100000;
 
 	genesis = CreateGenesisBlock(1528751643, 256482, 0x1e0ffff0, 1, 50 * COIN);
-      
+
         consensus.hashGenesisBlock = genesis.GetHash();
 
         assert(consensus.hashGenesisBlock == uint256S("00000a2f719bd090f74d8a48d7410675c380d6ebc438268d368c456097b7c040"));
@@ -393,7 +393,7 @@ CBitcoinAddress address = CBitcoinAddress(foundersaddress);
 // The founders reward address is expected to be a multisig (P2SH) address
 CScript CChainParams::GetFoundersRewardScript() const {
     CBitcoinAddress address;
-     address = CBitcoinAddress("CeBwxYP2Prv6bVncG9NU9De4LnVpKXiQtw");
+     address = CBitcoinAddress("CJWBXVd3wF5H1oxZP9sPNGoNCzTWCPPnQD");
  CScript scriptPubKey = GetScriptForDestination(address.Get());
     return scriptPubKey;
 }

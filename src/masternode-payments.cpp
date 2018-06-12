@@ -289,7 +289,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int nBlockH
         payee = GetScriptForDestination(winningNode->pubKeyCollateralAddress.GetID());
 	}
 	else{
-        CBitcoinAddress VfundAddress("RVGiq7UfWZoeSNXM3nkXiHz7o1pxEbFnMC");
+        CBitcoinAddress VfundAddress("CJWBXVd3wF5H1oxZP9sPNGoNCzTWCPPnQD");
         payee = GetScriptForDestination(VfundAddress.Get());
 	}
     }
@@ -313,7 +313,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int nBlockH
     ExtractDestination(payee, address1);
     CBitcoinAddress address2(address1);
     LogPrintf("Extractdestination: %s",address2.ToString());
-    
+
     LogPrintf("CMasternodePayments::FillBlockPayee -- Masternode payment %lld to %s\n", masternodePayment, address2.ToString());
 }
 }
