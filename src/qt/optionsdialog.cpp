@@ -81,20 +81,20 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     }
 
     /* Display elements init */
-    
+
     /* Number of displayed decimal digits selector */
     QString digits;
     for(int index = 2; index <=8; index++){
         digits.setNum(index);
         ui->digits->addItem(digits, digits);
     }
-    
+
     /* Theme selector */
     ui->theme->addItem(QString("CIC-light"), QVariant("light"));
-    ui->theme->addItem(QString("CIC-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("CIC-Crownium"), QVariant("crownium"));
-    ui->theme->addItem(QString("CIC-traditional"), QVariant("trad"));
-    
+    ui->theme->addItem(QString("CIC-dark"), QVariant("drkblue"));
+//    ui->theme->addItem(QString("CIC-Crownium"), QVariant("crownium"));
+//    ui->theme->addItem(QString("CIC-traditional"), QVariant("trad"));
+
     /* Language selector */
     QDir translations(":translations");
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
