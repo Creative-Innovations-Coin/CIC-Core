@@ -58,7 +58,37 @@
         <file alias="crownium">res/css/crownium.css</file>
         <file alias="light">res/css/light.css</file>
     </qresource>
-      <qresource prefix="/images/light">
+    <qresource prefix="/images/drkblue">
+        <file alias="about">res/images/drkblue/about.png</file>
+        <file alias="cic_logo_horizontal">res/images/drkblue/cic_logo_horizontal.png</file>
+        <file alias="unchecked">res/images/drkblue/unchecked.png</file>
+        <file alias="checked">res/images/drkblue/checked.png</file>
+        <file alias="drkblue_downArrow">res/images/drkblue/drkblue_downArrow.png</file>
+        <file alias="drkblue_downArrow_small">res/images/drkblue/drkblue_downArrow_small.png</file>
+        <file alias="drkblue_upArrow_small">res/images/drkblue/drkblue_upArrow_small.png</file>
+        <file alias="drkblue_leftArrow_small">res/images/drkblue/drkblue_leftArrow_small.png</file>
+        <file alias="drkblue_rightArrow_small">res/images/drkblue/drkblue_rightArrow_small.png</file>
+        <file alias="drkblue_qtreeview_selected">res/images/drkblue/drkblue_qtreeview_selected.png</file>
+        <file alias="drkblue_walletFrame_bg">res/images/drkblue/drkblue_walletFrame_bg.png</file>
+        <file alias="splash">res/images/drkblue/splash.png</file>
+        <file alias="splash_testnet">res/images/drkblue/splash_testnet.png</file>
+    </qresource>
+    <qresource prefix="/images/crownium">
+        <file alias="about">res/images/crownium/about.png</file>
+        <file alias="cic_logo_horizontal">res/images/crownium/cic_logo_horizontal.png</file>
+        <file alias="unchecked">res/images/crownium/unchecked.png</file>
+        <file alias="checked">res/images/crownium/checked.png</file>
+        <file alias="drkblue_downArrow">res/images/crownium/drkblue_downArrow.png</file>
+        <file alias="drkblue_downArrow_small">res/images/crownium/drkblue_downArrow_small.png</file>
+        <file alias="drkblue_upArrow_small">res/images/crownium/drkblue_upArrow_small.png</file>
+        <file alias="drkblue_leftArrow_small">res/images/crownium/drkblue_leftArrow_small.png</file>
+        <file alias="drkblue_rightArrow_small">res/images/crownium/drkblue_rightArrow_small.png</file>
+        <file alias="drkblue_qtreeview_selected">res/images/crownium/drkblue_qtreeview_selected.png</file>
+        <file alias="drkblue_walletFrame_bg">res/images/crownium/drkblue_walletFrame_bg.png</file>
+        <file alias="splash">res/images/crownium/splash.png</file>
+        <file alias="splash_testnet">res/images/crownium/splash_testnet.png</file>
+    </qresource>
+    <qresource prefix="/images/light">
         <file alias="about">res/images/light/about.png</file>
         <file alias="cic_logo_horizontal">res/images/light/cic_logo_horizontal.png</file>
         <file alias="unchecked">res/images/light/unchecked.png</file>
@@ -72,6 +102,19 @@
         <file alias="drkblue_walletFrame_bg">res/images/light/drkblue_walletFrame_bg.png</file>
         <file alias="splash">res/images/light/splash.png</file>
         <file alias="splash_testnet">res/images/light/splash_testnet.png</file>
+    </qresource>
+    <qresource prefix="/images/trad">
+        <file alias="about">res/images/trad/about.png</file>
+        <file alias="cic_logo_horizontal">res/images/trad/cic_logo_horizontal.png</file>
+        <file alias="drkblue_downArrow">res/images/trad/drkblue_downArrow.png</file>
+        <file alias="drkblue_downArrow_small">res/images/trad/drkblue_downArrow_small.png</file>
+        <file alias="drkblue_upArrow_small">res/images/trad/drkblue_upArrow_small.png</file>
+        <file alias="drkblue_leftArrow_small">res/images/trad/drkblue_leftArrow_small.png</file>
+        <file alias="drkblue_rightArrow_small">res/images/trad/drkblue_rightArrow_small.png</file>
+        <file alias="drkblue_qtreeview_selected">res/images/trad/drkblue_qtreeview_selected.png</file>
+        <file alias="drkblue_walletFrame_bg">res/images/trad/drkblue_walletFrame_bg.png</file>
+        <file alias="splash">res/images/trad/splash.png</file>
+        <file alias="splash_testnet">res/images/trad/splash_testnet.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="spinner-000">res/movies/spinner-000.png</file>
