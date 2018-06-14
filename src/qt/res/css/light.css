@@ -1229,7 +1229,7 @@ border:1px solid #686f67;
 }
 
 QDialog#SendCoinsDialog .QCheckBox#checkUsePrivateSend { /* PrivateSend Checkbox */
-color:#33cc99;
+color:#cc6600;
 font-weight:bold;
 background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop:0 rgba(248, 246, 246, 128), stop: 1 rgba(0, 0, 0, 0));
 border-radius:5px;
@@ -1238,7 +1238,7 @@ padding-bottom:18px;
 }
 
 QDialog#SendCoinsDialog .QCheckBox#checkUseInstantSend { /* InstantSend Checkbox */
-color:#33cc99;
+color:#cc6600;
 font-weight:bold;
 background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop:0 rgba(248, 246, 246, 128), stop: 1 rgba(0, 0, 0, 0));
 border-radius:5px;
@@ -1267,7 +1267,7 @@ min-height:27px;
 QDialog#SendCoinsDialog QLabel#labelBalance {
 margin-left:0px;
 padding-left:0px;
-color:#33cc99;
+color:#cc6600;
 /* font-weight:bold;
 border-radius:5px;
 padding-top:20px;
