@@ -1804,13 +1804,13 @@ CAmount GetMainBlockReward(int nPrevHeight) {
         blockReward =  625;
     }
 
-   /*if(((nPrevHeight) % 100 == 0) && nPrevHeight >= 13788) {
+   if(((nPrevHeight) % 100 == 0) && nPrevHeight >= 13788) {
         blockReward = blockReward*10;
     } else {
 	if (nPrevHeight >= 13788){
         blockReward *= 0.9;
 	}
-    }*/
+    }
     return blockReward * COIN;
 }
 
