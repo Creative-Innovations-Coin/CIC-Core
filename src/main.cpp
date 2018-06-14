@@ -1841,14 +1841,14 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockReward)
     //return blockValue * 0.40;
     //blockValue = ((nHeight % 100 == 0) && nHeight > 15799) ?  getblkreward(nHeight -1) : blockValue;
    //CAmount blockValue = (((nHeight - 1) % 100 == 0) && nHeight >13788) ?  getblkreward(nHeight -5) : blockReward;
-   CAmount masterNodePayment = blockValue * 0.001;
+   CAmount masterNodePayment = blockValue * 0.90;
     if (nHeight > 2160 && nHeight < 35001){
 
-        masterNodePayment = blockValue * 0.25;
+        masterNodePayment = blockValue * 0.80;
     }
     if (nHeight > 35000 && nHeight < 50001){
 
-        masterNodePayment = blockValue * 0.35;
+        masterNodePayment = blockValue * 0.6;
     }
     if (nHeight > 50000 && nHeight < 75001){
 

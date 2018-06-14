@@ -103,7 +103,7 @@ background-color:#f2f2f2;
 /*******************************************************/
 
 QPushButton { /* Global Button Style */
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #c6bcb8, stop: .1 #686f67, stop: .95 #686f67, stop: 1 #1D80B5);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #c6bcb8, stop: .1 #686f67, stop: .95 #686f67, stop: 1 #c6bcb8);
 border:0;
 border-radius:3px;
 color:#c6bcb8;
@@ -118,7 +118,7 @@ margin-right: 10px;
 }
 
 QPushButton:hover {
-background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #c6bcb8, stop: .1 #c6bcb8, stop: .95 #c6bcb8, stop: 1 #1D80B5);
+background-color:qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: .01 #c6bcb8, stop: .1 #c6bcb8, stop: .95 #c6bcb8, stop: 1 #c6bcb8);
 }
 
 QPushButton:focus {
@@ -1229,7 +1229,7 @@ border:1px solid #686f67;
 }
 
 QDialog#SendCoinsDialog .QCheckBox#checkUsePrivateSend { /* PrivateSend Checkbox */
-color:#686f67;
+color:#33cc99;
 font-weight:bold;
 background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop:0 rgba(248, 246, 246, 128), stop: 1 rgba(0, 0, 0, 0));
 border-radius:5px;
@@ -1238,7 +1238,7 @@ padding-bottom:18px;
 }
 
 QDialog#SendCoinsDialog .QCheckBox#checkUseInstantSend { /* InstantSend Checkbox */
-color:#686f67;
+color:#33cc99;
 font-weight:bold;
 background: qradialgradient(cx:0.5, cy:0.5, radius: 0.5, fx:0.5, fy:0.5, stop:0 rgba(248, 246, 246, 128), stop: 1 rgba(0, 0, 0, 0));
 border-radius:5px;
@@ -1267,7 +1267,7 @@ min-height:27px;
 QDialog#SendCoinsDialog QLabel#labelBalance {
 margin-left:0px;
 padding-left:0px;
-color:#686f67;
+color:#33cc99;
 /* font-weight:bold;
 border-radius:5px;
 padding-top:20px;
