@@ -283,13 +283,13 @@ CBlockTemplate* CreateNewBlock(const CChainParams& chainparams, const CScript& s
         // Compute regular coinbase transaction.
         txNew.vout[0].nValue = blockReward;
         txNew.vin[0].scriptSig = CScript() << nHeight << OP_0;
-	if (pindexPrev->nHeight < 12788) {
+	if (pindexPrev->nHeight < 2800) {
 	FOUNDER_REWARD = false;
 	}
 	else {
 	FOUNDER_REWARD = true;
 	}
-        if (pindexPrev->nHeight < 12788) {
+        if (pindexPrev->nHeight < 2800) {
 //pay founders reward
         //if ((nHeight > 0) && (nHeight <= Params().GetConsensus().GetLastFoundersRewardBlockHeight())) {
         if(Params().NetworkIDString() =="test") {

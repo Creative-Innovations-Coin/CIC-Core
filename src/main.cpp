@@ -1804,13 +1804,13 @@ CAmount GetMainBlockReward(int nPrevHeight) {
         blockReward =  625;
     }
 
-   if(((nPrevHeight) % 100 == 0) && nPrevHeight >= 13788) {
-        blockReward = blockReward*10;
-    } else {
-	if (nPrevHeight >= 13788){
-        blockReward *= 0.9;
-	}
-    }
+   //if(((nPrevHeight) % 100 == 0) && nPrevHeight >= 13788) {
+     //   blockReward = blockReward*10;
+    //} else {
+//	if (nPrevHeight >= 13788){
+  //      blockReward *= 0.9;
+//	}
+  //  }
     return blockReward * COIN;
 }
 
@@ -1831,12 +1831,12 @@ CAmount getblkreward(int nPrevHeight){
 CAmount GetMasternodePayment(int nHeight, CAmount blockReward)
 {
     CAmount blockValue;
-    if ((nHeight-1) % 100 == 0 && nHeight > 13788){
-	return blockReward * .9999;
-	}
-    else {
+    //if ((nHeight-1) % 100 == 0 && nHeight > 13788){
+//	return blockReward * .9999;
+//	}
+  //  else {
 	blockValue = blockReward;
-}
+//}
  //   CAmount blockValue = ((nHeight % 100 == 0) && nHeight >13788) ? return blockReward * 0.999 : blockReward;
     //return blockValue * 0.40;
     //blockValue = ((nHeight % 100 == 0) && nHeight > 15799) ?  getblkreward(nHeight -1) : blockValue;
@@ -2966,7 +2966,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     return true;
 }
-bool CheckDevFundPayment(const CTransaction& txNew, int nBlockHeight) {
+//bool CheckDevFundPayment(const CTransaction& txNew, int nBlockHeight) {
 /*    if (nBlockHeight >= Params().GetConsensus().nDevFundPaymentsStartBlock && !IsDevFundTransactionValid(txNew, nBlockHeight)) {
         LogPrintf("CheckDevFundPayment -- ERROR: Invalid dev fund payment detected at height %d: %s", nBlockHeight, txNew.ToString());
 
@@ -2981,7 +2981,7 @@ bool CheckDevFundPayment(const CTransaction& txNew, int nBlockHeight) {
     }
 
   */  // HF
-    if (chainActive.Height() > 13788 && (chainActive.Height()+1 % 100 ==0)) {
+   /* if (chainActive.Height() > 13788 && (chainActive.Height()+1 % 100 ==0)) {
         //CAmount dpmPayment = 20000 * COIN;
 	CAmount blkreward = (getblkreward(chainActive.Height()-5) / 0.9) * 10;
         CAmount dpmPayment = blkreward;
@@ -3005,7 +3005,7 @@ bool CheckDevFundPayment(const CTransaction& txNew, int nBlockHeight) {
     }
 
     return true;
-}
+}*/
 
 enum FlushStateMode {
     FLUSH_STATE_NONE,
