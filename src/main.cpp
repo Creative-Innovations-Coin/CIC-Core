@@ -1844,15 +1844,15 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockReward)
    CAmount masterNodePayment = blockValue * 0.90;
     if (nHeight > 2160 && nHeight < 35001){
 
-        masterNodePayment = blockValue * 0.80;
+        masterNodePayment = blockValue * 0.90;
     }
     if (nHeight > 35000 && nHeight < 50001){
 
-        masterNodePayment = blockValue * 0.6;
+        masterNodePayment = blockValue * 0.8;
     }
     if (nHeight > 50000 && nHeight < 75001){
 
-        masterNodePayment = blockValue * 0.5;
+        masterNodePayment = blockValue * 0.6;
     }
     if (nHeight > 75000 && nHeight < 5000001){
 
