@@ -12,10 +12,10 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 70210;
+static const int PROTOCOL_VERSION = 70220;
 
 //! initial proto version, to be increased after version/verack negotiation
-static const int INIT_PROTO_VERSION = 209;
+static const int INIT_PROTO_VERSION = 220;
 
 //! In this version, 'getheaders' was introduced.
 static const int GETHEADERS_VERSION = 70077;

@@ -1785,7 +1785,7 @@ CAmount GetMainBlockReward(int nPrevHeight) {
     } else if (nPrevHeight <= 12800) {
         blockReward = 1000;
     } else if (nPrevHeight <= 20600){
-        blockReward = 1750;
+        blockReward = 1000;
     } else if (nPrevHeight <= 50000){
         blockReward = 1000;
     } else if (nPrevHeight <= 500000){
@@ -1850,11 +1850,11 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockReward)
 
         masterNodePayment = blockValue * 0.9;
     }
-    if (nHeight > 35000 && nHeight < 50001){
+    if (nHeight > 16000 && nHeight < 50000){
 
-        masterNodePayment = blockValue * 0.6;
+        masterNodePayment = blockValue * 0.5;
     }
-    if (nHeight > 75000 && nHeight < 5000001){
+    if (nHeight > 50000 && nHeight < 5000001){
 
         masterNodePayment = blockValue * 0.5;
     }
